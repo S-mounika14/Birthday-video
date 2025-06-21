@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <!-- Top toolbar -->
+    <LinearLayout
+        android:id="@+id/tool_edit_rigntone"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_theme_bg"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/ringtone_back"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:contentDescription="@string/back_from_ringtone_edit_page"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back_page_icon"
+                android:src="@drawable/back_page_sarees" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:id="@+id/tool_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/audio_cutter"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Waveform area (removed waveform_container) -->
+
+
+    <FrameLayout
+        android:id="@+id/waveform_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_edit_rigntone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <com.birthday.video.maker.Birthday_Video.mp3cutter_ringtonemaker.WaveformView
+                android:id="@+id/waveform"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp" />
+
+            <com.birthday.video.maker.Birthday_Video.mp3cutter_ringtonemaker.MarkerView
+                android:id="@+id/startmarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/start_marker"
+                android:background="@drawable/left_arrow"
+                />
+
+            <com.birthday.video.maker.Birthday_Video.mp3cutter_ringtonemaker.MarkerView
+                android:id="@+id/endmarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/right_arrow"
+                android:contentDescription="@string/end_marker"
+                />
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- Controls container -->
+    <LinearLayout
+        android:id="@+id/controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/waveform_frame"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <!-- Time controls -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/background_text_view_gery_40">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/start_time_minus_image_view"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="zoom_out"
+                        android:padding="6dp"
+                        app:srcCompat="@drawable/ic_minus" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/starttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@color/Transparent"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/background_text_view_gery_40">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/start_time_plus_image_view"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="zoom_out"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_plus" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/background_text_view_gery_40">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/end_time_minus_image_view"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="zoom_out"
+                        android:padding="6dp"
+                        app:srcCompat="@drawable/ic_minus" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/endtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@color/Transparent"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/background_text_view_gery_40">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/end_time_plus_image_view"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="zoom_out"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_plus" />
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Playback controls -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_text_view_gery_40">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/zoomout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="zoom_out"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_zoomout_icon" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_text_view_gery_40">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/rew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="rewind"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/backward_button" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_text_view_gery_40">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="play"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_music_play1" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_text_view_gery_40">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ffwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="forward"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/forward_button" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/background_text_view_gery_40">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/zoomin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="zoom_in"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_zoomin_36_black" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/save_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/save_material_button_foreground">
+
+                <TextView
+                    android:id="@+id/maintext_ringtone_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="40dp"
+                    android:paddingStart="40dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="18sp"
+                    android:textAllCaps="true"
+                    android:text="@string/save"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

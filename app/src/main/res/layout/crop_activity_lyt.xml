@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewpager_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewpager_bg_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/toolbar_theme_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/back_crop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@string/back_from_crop_page"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/back_page_icon"
+                        android:src="@drawable/back_page_sarees" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/crop_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:text="@string/cropping"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="@dimen/textsize_toolbar"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/shadowutop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool"
+            android:background="@drawable/shadow_down"
+            android:contentDescription="@string/shadowtop"
+            android:minHeight="6.0dip" />
+
+        <FrameLayout
+            android:id="@+id/adContainerView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp">
+
+            <simplecropview.simplecropview.src.main.java.com.isseiaoki.simplecropview.CropImageView
+                android:id="@+id/cropImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/cropimageview"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                custom:scv_crop_mode="fit_image"
+                custom:scv_frame_color="#123"
+                custom:scv_frame_stroke_weight="1dp"
+                custom:scv_guide_color="#123"
+                custom:scv_guide_show_mode="show_always"
+                custom:scv_guide_stroke_weight="1dp"
+                custom:scv_handle_color="#123"
+                custom:scv_handle_show_mode="show_always"
+                custom:scv_handle_size="14dp"
+                custom:scv_min_frame_size="50dp"
+                custom:scv_overlay_color="#AA1C1C1C"
+                custom:scv_touch_padding="8dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/toolbar_shadow_down"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/saree_theme_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:scrollbarStyle="insideInset"
+                android:visibility="visible"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/buttonCancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/cancel_crop_image"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cancel_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/close_icon"
+                        android:padding="3dp"
+                        android:src="@mipmap/cancel_shadow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel"
+                        android:textAppearance="@style/customfontstyle"
+                        android:textColor="@color/darkgrey"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/buttonRotateRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/rotate_cropimage"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/rotate_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/rotate_icon"
+                        android:padding="3dp"
+                        android:src="@mipmap/rorate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rotate"
+                        android:textAppearance="@style/customfontstyle"
+                        android:textColor="@color/darkgrey"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/done_cropimage"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/done_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/done"
+                        android:padding="3dp"
+                        android:src="@mipmap/ok" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ok"
+                        android:textAppearance="@style/customfontstyle"
+                        android:textColor="@color/darkgrey"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_crop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D48B8B8B"
+        android:visibility="gone">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/progress_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ProgressBar
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:theme="@style/AppTheme.ProgressColor"
+
+                />
+
+            <TextView
+                android:id="@+id/loading_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/please_wait"
+                android:textAppearance="@style/customfontstyle"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

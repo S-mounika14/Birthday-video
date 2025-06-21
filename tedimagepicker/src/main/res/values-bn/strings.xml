@@ -1,0 +1,16 @@
+<resources>
+    <string name="ted_image_picker_album_all">সব</string>
+    <string name="ted_image_picker_empty">খালি</string>
+    <string name="ted_image_picker_title">ছবি নির্বাচন করুন</string>
+    <string name="ted_image_picker_done">সম্পন্ন</string>
+    <string name="ted_image_picker_max_count">আপনি আরও কিছু যোগ করতে পারবেন না</string>
+    <string name="ted_image_picker_min_count">আপনাকে ছবি নির্বাচন করতে হবে</string>
+    <string name="ted_image_picker_image">ছবি</string>
+    <string name="ted_image_picker_video">ভিডিও</string>
+    <string name="ted_image_picker_image_video">ছবি/ভিডিও</string>
+    <string name="ted_image_picker_partial_access_notice_fmt">আপনি %1$s এর একটি নির্দিষ্ট পরিমাণ অ্যাক্সেস প্রদান করেছেন</string>
+    <string name="ted_image_picker_manage">ব্যবস্থাপনা</string>
+    <string name="ted_image_picker_select_more_photo_video_fmt">আরও %1$s নির্বাচন করুন</string>
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">পূর্ণ অ্যাক্সেস প্রদান করুন %1$s</string>
+    <string name="ted_image_picker_cancel">বাতিল</string>
+</resources>

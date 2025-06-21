@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_griditem_creation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/White"
+            app:cardCornerRadius="4dp"
+            app:elevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/cat_title">
+
+                    <ImageView
+                        android:id="@+id/creation_imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:padding="5dp"
+                        android:contentDescription="@string/stickers" />
+
+                </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/cat_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#4db9ea"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/downloadImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_margin="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:cardBackgroundColor="#eeeeee"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="1dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/unlock_now"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_lock1" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>

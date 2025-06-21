@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/White"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="5dp">
+
+    <RadioGroup
+        android:id="@+id/sort_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingStart="20dp"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp">
+
+        <RadioButton
+            android:id="@+id/date_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:layout_weight="1"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/name_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/name"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:layout_marginTop="0dp"/>
+
+        <RadioButton
+            android:id="@+id/duration_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            android:paddingStart="10dp"
+            android:layout_weight="1"
+            android:paddingEnd="0dp"
+            android:layout_marginTop="0dp"/>
+
+    </RadioGroup>
+
+</androidx.cardview.widget.CardView>

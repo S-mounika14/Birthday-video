@@ -1,0 +1,20 @@
+<resources>
+    <string name="ted_image_picker_album_all">toate</string>
+    <string name="ted_image_picker_empty">Gol</string>
+    <string name="ted_image_picker_title">Selectați Imagine</string>
+    <string name="ted_image_picker_done">Făcut</string>
+    <string name="ted_image_picker_max_count">Nu puteți adăuga mai mult</string>
+    <string name="ted_image_picker_min_count">Trebuie să alegeți imagini</string>
+
+    <string name="ted_image_picker_image">Imagine</string>
+    <string name="ted_image_picker_video">Video</string>
+    <string name="ted_image_picker_image_video">Imagine/Video</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">Ați dat acces la un număr selectat de %1$s</string>
+    <string name="ted_image_picker_manage">Gestionează</string>
+
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">Selectați mai multe %1$s</string>
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">Acordați acces complet %1$s</string>
+    <string name="ted_image_picker_cancel">Anula</string>
+</resources>

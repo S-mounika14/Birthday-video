@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.birthday.video.maker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <queries>
+        <package android:name="com.facebook.katana" />
+        <package android:name="com.whatsapp" />
+        <package android:name="com.twitter.android" />
+        <package android:name="com.instagram.android" />
+
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="image/*" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="video/*" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".application.BirthdayWishMakerApplication"
+        android:allowBackup="false"
+        tools:replace="android:allowBackup"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupOnly="false"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".activities.NewMainActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+        <activity
+            android:name=".Age_Result"
+            android:exported="false"
+            android:theme="@style/Theme.BlackStatusBar"
+            />
+<!--            android:theme="@style/Theme.BlackStatusBar"-->
+
+        <activity
+            android:name=".MultiShareActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity" />
+        <activity
+            android:name=".MultiShareActivityforGifs"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity" />
+        <activity
+            android:name=".activities.CreationShare"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LanguageSelectionActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity" />
+        <activity
+            android:name=".activities.SettingActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+        <activity
+            android:name=".activities.VideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".stickers.StickersActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Birthday_Gifs.Gif_Stickers"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+          />
+        <activity
+            android:name=".Birthday_Video.customgallery.GalleryActivityVideo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".crop_image.CropImageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppTheme"
+          />
+
+
+        <activity
+            android:name=".Birthday_Cakes.custGallery.PhotoSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Birthday_Video.video_title.Video_Title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Birthday_Cakes.Photo_in_Cake_recyclerview"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2179417820738897~2019180965" />
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Birthday_Frames.Birthday_Photo_Frames"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+           />
+        <activity
+            android:name=".Birthday_Remainders.Birthday_Reminder_page"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+        <activity
+            android:name=".Birthday_Cakes.Name_OnCake"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+          />
+        <activity
+            android:name=".Birthday_GreetingCards.Greetings_Page"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+          />
+        <activity
+            android:name=".creations.ImageViewer"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".agecalculator.AgeCalculator_fragment"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/Theme.BlueStatusBar"/>
+<!--            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>-->
+        <activity
+            android:name=".agecalculator.AgeCalculator_fragment2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.Crop_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Onlineframes.AllFramesViewpaer"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+        <activity
+            android:name=".Birthday_messages.Messages"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"
+           />
+        <activity
+            android:name=".Birthday_GreetingCards.Edit_Image_Stickers"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator"
+           />
+        <activity
+            android:name=".Birthday_messages.Birthday_Wishes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity" />
+        <activity
+            android:name=".Birthday_messages.Birthday_Wishes_Viewpager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Birthday_messages.favorites.Favorite_Swipe_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Birthday_messages.favorites.FavoriteQuotes_Page"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.birthday.video.maker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Wallpaper_Settings"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".TextonPhotoService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/birthday_wallpaper" />
+        </service>
+
+        <activity
+            android:name=".activities.PhotoShare"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+        <activity
+            android:name=".Birthday_Gifs.PhotoShareforGifs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <receiver
+            android:name=".Birthday_Remainders.Receiver"
+            tools:ignore="InnerclassSeparator" />
+
+        <activity
+            android:name=".Birthday_Remainders.BirthdayRemainderSettings"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+
+        <receiver
+            android:name=".Birthday_Remainders.OnAlarmReceiver"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".Birthday_Remainders.OnBootReceiver"
+            android:enabled="false"
+            android:exported="true"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Birthday_Gifs.GifsEffectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+           />
+     <!--   <activity
+            android:name=".Birthday_Gifs.Gif_Stickers"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />-->
+        <activity
+            android:name=".Birthday_Remainders.AddBirthdayDetails"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Birthday_Remainders.EditBirhdayDetails"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Birthday_Video.activity.GridBitmaps_Activity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Birthday_Video.activity.SDcard_music_list_activity2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".Birthday_Video.activity.Video_preview_activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".Birthday_Video.activity.RingdroidEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Birthday_Cakes.Photo_OnCake"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+          />
+        <activity
+            android:name=".Birthday_Video.activity.Image_Edit_Activity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Birthday_Cakes.database.Cakes_Templete"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentActivity"/>
+        <activity
+            android:name=".Birthday_Gifs.GifsEffectActivity_Photo"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+          />
+    </application>
+
+</manifest>

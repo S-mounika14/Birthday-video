@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/viewpager_bg_color"
+    android:padding="15dp">
+
+    <ScrollView
+        android:id="@+id/swathi"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:contentDescription="@string/balloon_icon"
+                    android:src="@drawable/ballon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Balloon"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:buttonTint="@color/darkgrey"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:contentDescription="@string/gift_icon"
+                    android:src="@drawable/snow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Snow"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:buttonTint="@color/darkgrey"
+                    android:gravity="center" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:contentDescription="@string/bubble_icon"
+                    android:src="@drawable/bubble_1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Bubble"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:buttonTint="@color/darkgrey"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:contentDescription="@string/flies_icon"
+                    android:src="@drawable/st4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="FireFlies"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:buttonTint="@color/darkgrey"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:contentDescription="@string/candy_icon"
+                    android:src="@drawable/fficon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Candy"
+                    android:textColor="@color/darkgrey"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:buttonTint="@color/darkgrey"
+                    android:gravity="center" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/rain" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Rain"
+                    android:contentDescription="@string/rain_icon"
+                    android:textColor="@color/darkgrey"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:buttonTint="@color/darkgrey"
+                    android:gravity="center" />
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:contentDescription="@string/love_icon"
+                    android:src="@drawable/love" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Love"
+                    android:textColor="@color/darkgrey"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:buttonTint="@color/darkgrey"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/cancel_anim"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/swathi"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@color/Coral"
+        android:gravity="center"
+        android:text="ok"
+        android:textAppearance="@style/customfontstyle"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

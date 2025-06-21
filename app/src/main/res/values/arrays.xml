@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="date_format">
+        <item>dd/MM/YYYY</item>
+        <item>MM/dd/YYYY</item>
+        <item>YYYY/MM/dd</item>
+        <item>dd-MM-YYYY</item>
+        <item>MM-dd-YYYY</item>
+        <item>YYYY-MM-dd</item>
+        <item>dd.MM.YYYY</item>
+        <item>MM.dd.YYYY</item>
+        <item>YYYY.MM.dd</item>
+    </array>
+
+</resources>

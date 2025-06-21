@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/language_selected_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_bgss"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="8dp"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingStart="15dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/edit_text_and_image_color" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/language_selection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="20dp"
+        android:layout_marginTop="48dp">
+
+        <TextView
+            android:id="@+id/choose_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_your_language"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/edit_text_and_image_color"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:id="@+id/drawer_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/language_selection_layout"
+        android:scrollbars="none">
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:weightSum="18"
+            android:orientation="vertical"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/text_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:background="@drawable/radio_button_background"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/english_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/english_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/english_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/spanish_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/spanish_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/spanish_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/spanish_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/french_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/french_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/french_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </TextView>
+
+                    <RadioButton
+                        android:id="@+id/french_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:button="@drawable/selector_checkmark"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/french_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                 />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hindi_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/hindi_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/hindi_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/hindi_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/hindi_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--               />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/russian_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/russian_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/russian_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/russian_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/hindi_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--               />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/german_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/german_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/german_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/german_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/german_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/italian_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/italian_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/italian_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/italian_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/italian_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                 />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/korea_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/korea_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/korean_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/korea_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/bangla_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/grey_80"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                 />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/indonesia_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/indonesia_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/indonesia_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/indonesia_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/indonesia_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/portuguese_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/portuguese_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/portuguese_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/portuguese_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/portuguese_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/polish_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/polish_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/polish_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/polish_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/sinhala_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                 />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/romanian_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/romanian_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/romanian_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/romanian_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/swedish_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vietnamese_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/vietnamese_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/vietnamese_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+
+                    <RadioButton
+                        android:id="@+id/vietnamese_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--                <RadioButton-->
+                    <!--                    android:id="@+id/pilipino_radio_button"-->
+                    <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                    android:layout_marginEnd="20dp"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:buttonTint="@color/Gray"-->
+                    <!--                    android:fontFamily="@font/designfont"-->
+                    <!--                    android:textStyle="bold"-->
+                    <!--                    android:textColor="@color/Gray"-->
+                    <!--                    android:textSize="13sp"-->
+                    <!--                    />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/japan_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/japan_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/japan_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/japan_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/hindi_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--               />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/turkish_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/turkish_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/turkish_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/turkish_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/hindi_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--               />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/thai_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/thai_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/thai_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/thai_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/hindi_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--               />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chinese_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/chinese_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/chinese_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/chinese_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/hindi_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--               />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bangla_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/bangla_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/bangla_language"
+                        android:textColor="@color/grey_60"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </TextView>
+                    <RadioButton
+                        android:id="@+id/bangla_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_checkmark"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                    <!--            <RadioButton-->
+                    <!--                android:id="@+id/hindi_radio_button"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                android:layout_marginEnd="20dp"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:buttonTint="@color/Gray"-->
+                    <!--                android:fontFamily="@font/designfont"-->
+                    <!--                android:textStyle="bold"-->
+                    <!--                android:textColor="@color/Gray"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--               />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </RadioGroup>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

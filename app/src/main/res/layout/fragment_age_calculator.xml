@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:float="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    >
+
+    <!-- Top blue background -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background_part_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blueColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- DIARY Title -->
+    <TextView
+        android:id="@+id/diary_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--     Back Button -->
+    <RelativeLayout
+        android:id="@+id/age_cal_back"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center"
+        android:layout_weight="0.2"
+        android:contentDescription="@string/back_from_age_calculator"
+        android:gravity="center"
+        float:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:tint="#ffffff"
+            android:src="@drawable/back_page_sarees" />
+    </RelativeLayout>
+
+    <!-- Main content card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/age_calculator_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_title">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inside_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Age Calculator Title -->
+                <TextView
+                    android:id="@+id/age_calculator_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/age_calculator"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/grey_80"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Input Fields Section -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/edit_fields_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/calculate_card_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/age_calculator_title">
+
+                    <!-- Date of Birth Field -->
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        android:id="@+id/dateOfBirthField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@null"
+                        app:fletPadding="5dp"
+                        app:layout_constraintBottom_toTopOf="@+id/todayDateField"
+                        app:layout_constraintTop_toTopOf="parent"
+                        float:fletTextAppearance="@style/floatlabelededittext">
+
+                        <EditText
+                            android:id="@+id/date_of_birth_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="@string/date_of_birthh"
+                            android:imeOptions="actionNext"
+                            android:inputType="date"
+                            android:maxLines="1"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="15dp"
+                            android:paddingTop="5dp"
+                            android:textColor="#808080"
+                            android:textColorHint="#a9a9a9"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="18sp" />
+
+                        <!-- Left Border -->
+                        <View
+                            android:id="@+id/dob_left_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="5dp"
+                            android:layout_gravity="bottom|left"
+                            android:background="#808080" />
+
+                        <!-- Right Border -->
+                        <View
+                            android:id="@+id/dob_right_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="5dp"
+                            android:layout_gravity="bottom|right"
+                            android:background="#808080" />
+
+                        <!-- Bottom Border -->
+                        <View
+                            android:id="@+id/dob_bottom_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="bottom"
+                            android:background="#808080" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <!-- Error TextView for Date of Birth -->
+                    <TextView
+                        android:id="@+id/dateOfBirthError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:textColor="#F44336"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/todayDateField"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dateOfBirthField" />
+
+                    <!-- Today's Date Field -->
+                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                        android:id="@+id/todayDateField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@null"
+                        app:fletPadding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/dateOfBirthError"
+                        float:fletTextAppearance="@style/floatlabelededittext">
+
+                        <EditText
+                            android:id="@+id/today_date_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="@string/today_date"
+                            android:imeOptions="actionDone"
+                            android:inputType="date"
+                            android:maxLines="1"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="5dp"
+                            android:textColor="#808080"
+                            android:textColorHint="#a9a9a9"
+                            android:textSize="18sp"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"/>
+
+                        <!-- Left Border -->
+                        <View
+                            android:id="@+id/today_left_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="5dp"
+                            android:layout_gravity="bottom|left"
+                            android:background="#808080" />
+
+                        <!-- Right Border -->
+                        <View
+                            android:id="@+id/today_right_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="5dp"
+                            android:layout_gravity="bottom|right"
+                            android:background="#808080" />
+
+                        <!-- Bottom Border -->
+                        <View
+                            android:id="@+id/today_bottom_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="bottom"
+                            android:background="#808080" />
+                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                    <!-- Error TextView for Today's Date -->
+                    <TextView
+                        android:id="@+id/todayDateError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:textColor="#F44336"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/todayDateField" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Calculate Age Button -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/calculate_card_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/calculate_age_button_click"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
+                    app:cardBackgroundColor="#2196F3"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_fields_layout">
+
+                    <TextView
+                        android:id="@+id/calculate_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:padding="15dp"
+                        android:text="@string/calculate_age"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

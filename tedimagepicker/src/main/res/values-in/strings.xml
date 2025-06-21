@@ -1,0 +1,29 @@
+<resources>
+    <string name="ted_image_picker_album_all">Semua</string>
+
+    <string name="ted_image_picker_empty">Kosong</string>
+
+    <string name="ted_image_picker_title">Pilih Gambar</string>
+
+    <string name="ted_image_picker_done">Selesai</string>
+
+    <string name="ted_image_picker_max_count">Anda tidak dapat menambahkan lebih banyak</string>
+
+    <string name="ted_image_picker_min_count">Anda harus memilih gambar</string>
+
+    <string name="ted_image_picker_image">Gambar</string>
+
+    <string name="ted_image_picker_video">Video</string>
+
+    <string name="ted_image_picker_image_video">Gambar/Video</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">Anda telah memberikan akses ke sejumlah %1$s tertentu</string>
+
+    <string name="ted_image_picker_manage">Mengelola</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">Pilih lebih banyak %1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">Berikan akses penuh %1$s</string>
+
+    <string name="ted_image_picker_cancel">Membatalkan</string>
+</resources>

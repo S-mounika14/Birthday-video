@@ -1,0 +1,82 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="35dp"
+    android:height="35dp"
+    android:viewportHeight="50"
+    android:viewportWidth="50">
+    <path
+        android:fillColor="@color/icon_color"
+        android:fillType="evenOdd"
+        android:pathData="M25,48.95C12.765,48.422 3,38.365 3,26C3,13.635 12.765,3.578 25,3.05L25,48.95Z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M25,7h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M25,16h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M25,25h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M25,16h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M25,25h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M25,43h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M25,34h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M30,11h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M30,20h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M30,11h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M30,20h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M30,38h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M30,29h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M35,7h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M35,16h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M35,25h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M35,16h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M35,25h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M35,34h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M40,12h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M40,21h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M40,30h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M44,26h5v5h-5z" />
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M44,16h5v5h-5z" />
+</vector>

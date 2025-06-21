@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#fff">
+
+
+    <FrameLayout
+        android:id="@+id/popup_ad_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/share_constraint_layout"
+        app:layout_constraintVertical_weight="0.4">
+
+
+        <TextView
+            android:id="@+id/loadingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/loading_ad"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/share_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/popup_ad_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.6">
+
+        <LinearLayout
+            android:id="@+id/share_options_lin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/face_book_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/freeuniversalbold"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:text="@string/facebook"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/edit_text_and_image_color"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:theme="@style/SelectableItemThemeHalfBlack"
+                app:drawableTopCompat="@drawable/logos_facebook"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/whats_app_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/freeuniversalbold"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:text="@string/whatsapp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/edit_text_and_image_color"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:theme="@style/SelectableItemThemeHalfBlack"
+                app:drawableTopCompat="@drawable/icon_watsapplastone"
+                tools:ignore="SmallSp" />
+
+
+            <TextView
+                android:id="@+id/twitter_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/freeuniversalbold"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/twitter"
+                android:textColor="@color/edit_text_and_image_color"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:theme="@style/SelectableItemThemeHalfBlack"
+                app:drawableTopCompat="@drawable/icon_twitter_xnew"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/insta_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/freeuniversalbold"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:text="@string/instagram"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/edit_text_and_image_color"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:theme="@style/SelectableItemThemeHalfBlack"
+                app:drawableTopCompat="@drawable/instagram_lastthree"
+                tools:ignore="SmallSp" />
+
+
+            <TextView
+                android:id="@+id/more_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/freeuniversalbold"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="3dp"
+                android:text="@string/more"
+                android:textColor="@color/edit_text_and_image_color"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:theme="@style/SelectableItemThemeHalfBlack"
+                app:drawableTopCompat="@drawable/more_icon_lastthree"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@+id/share_options_lin_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ops"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <!-- Back to Home Button -->
+
+                <TextView
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="10dp"
+
+                    android:paddingEnd="10dp"
+                    android:layout_marginStart="1dp"
+                    android:background="@drawable/circle1"
+                    android:backgroundTint="#FF8B94"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="8dp"
+                    android:text="@string/back_to_home"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/home_iconto" />
+
+
+                <!-- Delete Frame Layout -->
+
+
+
+               <!-- <TextView
+                    android:id="@+id/set_wallpaper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="0dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/circle1"
+                    android:backgroundTint="#FF8B94"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="0dp"
+                    android:text="@string/set_wallpaper"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/wallpaper" />
+-->
+
+
+
+            </LinearLayout>
+
+            <com.birthday.video.maker.activities.PageIndicatorView
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/ops"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:piv_animationDuration="200"
+                app:piv_animationType="drop"
+                app:piv_interactiveAnimation="true"
+                app:piv_radius="5dp"
+                app:piv_selectedColor="#f06292"
+                app:piv_unselectedColor="#fce4ec" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/indicator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.birthday.video.maker.activities.LoopingViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    app:autoScroll="false"
+                    app:isInfinite="true" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/preview_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/creation_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#FFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_btn_back_creation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/back_page_sarees"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/text_creation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/img_btn_back_creation"
+            android:fontFamily="@font/freeuniversalbold"
+            android:text="@string/back"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/Gray"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_btn_back_creation"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/sharactivity_delete"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

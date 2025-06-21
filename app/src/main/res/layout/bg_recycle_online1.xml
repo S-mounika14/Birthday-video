@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@color/transparent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/iv_recycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/name_cake_selection"
+                    android:scaleType="fitXY" />
+
+                <!--                <ImageButton-->
+                <!--                    android:id="@+id/selection"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_centerInParent="true"-->
+                <!--                    android:background="@drawable/cr81"-->
+                <!--                    android:clickable="false"-->
+                <!--                    android:contentDescription="@string/selection"-->
+                <!--                    android:src="@drawable/ic_done_select_15" />-->
+
+                <View
+                    android:id="@+id/border_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignTop="@id/iv_recycle"
+                    android:layout_alignBottom="@id/iv_recycle"
+                    android:layout_alignLeft="@id/iv_recycle"
+                    android:layout_alignRight="@id/iv_recycle"
+                    android:background="@drawable/selected_frame_item_bg"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/download_icon_sf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:clickable="false"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/zoom_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:adjustViewBounds="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="false"
+                    android:contentDescription="@string/selection_color"
+                    android:src="@drawable/download_icon_new"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <!--  <RelativeLayout
+                  android:id="@+id/download_icon_sf"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@color/transparent"
+                  android:clickable="false"
+                  android:visibility="visible">
+
+
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentEnd="true"
+                      android:layout_alignParentRight="true"
+                      android:layout_alignParentBottom="true"
+                      android:adjustViewBounds="true"
+                      android:background="@drawable/zoom_bg_rec"
+                      android:clickable="false"
+                      android:contentDescription="@string/selection_color"
+                      android:padding="6dp"
+                      android:visibility="visible" />
+
+                  <ImageView
+                      android:id="@+id/zoom_img"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentEnd="true"
+                      android:layout_alignParentRight="true"
+                      android:layout_alignParentBottom="true"
+                      android:adjustViewBounds="true"
+                      android:clickable="false"
+                      android:contentDescription="@string/selection_color"
+                      android:paddingTop="5dp"
+                      android:src="@drawable/ic_arrow_downward_16"
+                      android:visibility="visible" />
+
+              </RelativeLayout>-->
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

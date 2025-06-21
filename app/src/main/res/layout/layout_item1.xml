@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="50dp"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/image_lyt"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/textview_ratio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/bg_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/font"
+            app:fontFamily="@font/font"/>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_above="@+id/textview_ratio">
+
+            <RelativeLayout
+                android:id="@+id/relative_lyt_image"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="@color/white" />
+
+
+                <ImageView
+                    android:id="@+id/imageView_symbol"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

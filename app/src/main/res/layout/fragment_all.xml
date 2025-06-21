@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Bottomview_Fragments.AllFrameFragment">
+
+    <!-- NestedScrollView containing all content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/shaaa"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@+id/viewpager" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shaaa">
+
+            <RelativeLayout
+                android:id="@+id/cv_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/viewpager_bg_color"
+                android:descendantFocusability="blocksDescendants">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- First Row: Birthday Video Maker and Birthday Photo Frames -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:weightSum="2">
+                        <!-- Birthday Video Maker -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_5"
+                            android:layout_width="0dp"
+                            android:layout_height="88dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:theme="@style/SelectableItemThemeWhite"
+                            app:cardBackgroundColor="@color/transparent"
+                            app:cardCornerRadius="2dp"
+                            app:cardElevation="0dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/single_frame_background">
+
+                                <ImageView
+                                    android:id="@+id/video_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:contentDescription="@string/video_maker_icon"
+                                    android:scaleType="center"
+                                    android:src="@drawable/video_making_2" />
+
+                                <TextView
+                                    android:id="@+id/birthday_video_maker"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:maxLines="1"
+                                    android:text="@string/birthday_video_maker"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                        <!-- Birthday Photo Frames -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/photo_frames_card"
+                            android:layout_width="0dp"
+                            android:layout_height="88dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:theme="@style/SelectableItemThemeWhite"
+                            app:cardBackgroundColor="@color/transparent"
+                            app:cardCornerRadius="2dp"
+                            app:cardElevation="0dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/double_frame_background">
+
+                                <ImageView
+                                    android:id="@+id/frames_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:contentDescription="@string/frames_icon"
+                                    android:scaleType="center"
+                                    android:src="@drawable/photo_frame_4" />
+
+                                <TextView
+                                    android:id="@+id/photo_frames"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:maxLines="1"
+                                    android:text="@string/photo_frames"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <!-- Second Row: Greeting Cards, Name on Cake, Photo on Cake -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:weightSum="3">
+                            <!-- Greeting Cards -->
+                            <LinearLayout
+                                android:id="@+id/greeting_cards_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="6dp">
+
+                                <ImageView
+                                    android:layout_width="31dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/greeting_icon"
+                                    android:src="@drawable/greeting_10_ss"
+                                    app:tint="#6241fe" />
+
+                                <TextView
+                                    android:id="@+id/greeting_card"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="@string/greeting_cards"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                            <!-- Name on Cake -->
+                            <LinearLayout
+                                android:id="@+id/name_on_cake_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="6dp">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/name_cake_icon"
+                                    android:src="@drawable/name_on_cake_6"
+                                    app:tint="#FF1493" />
+
+                                <TextView
+                                    android:id="@+id/name_on_cake"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="@string/name_on_cake"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                            <!-- Photo on Cake -->
+                            <LinearLayout
+                                android:id="@+id/photo_on_cake_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="6dp">
+
+                                <ImageView
+                                    android:layout_width="31dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/photo_cake_icon"
+                                    android:src="@drawable/photo_on_cake_4"
+                                    app:tint="#009967" />
+
+                                <TextView
+                                    android:id="@+id/photo_on_cake_card"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="@string/photo_on_cake"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!-- Third Row: Birthday GIF Stickers, Birthday Quotes, Reminder, Age Calculator -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:weightSum="4">
+                            <!-- Birthday GIF Stickers -->
+                            <LinearLayout
+                                android:id="@+id/gif_stickers_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <ImageView
+                                    android:id="@+id/gif_sticker_img"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/gif_sticker_icon"
+                                    android:src="@drawable/giff"
+                                    app:tint="#03A9F4" />
+
+                                <TextView
+                                    android:id="@+id/birthday_gifs_card"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="@string/birthday_gif_stickers"
+                                    android:textColor="#2B2A2A"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                            <!-- Birthday Quotes -->
+                            <LinearLayout
+                                android:id="@+id/quotes_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/wishes_icon"
+                                    android:src="@drawable/quotes1"
+                                    app:tint="#fd8590" />
+
+                                <TextView
+                                    android:id="@+id/birthday_quotes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="@string/birthday_quotes"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                            <!-- Reminder -->
+                            <LinearLayout
+                                android:id="@+id/reminder_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/reminder_icon"
+                                    android:src="@drawable/calendar1"
+                                    app:tint="#fcbd71" />
+
+                                <TextView
+                                    android:id="@+id/reminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="@string/reminder"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                            <!-- Age Calculator -->
+                            <LinearLayout
+                                android:id="@+id/age_calculator_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/calculator_icon"
+                                    android:src="@drawable/age_calculator_1"
+                                    app:tint="#71E6DA" />
+
+                                <TextView
+                                    android:id="@+id/age_calculator"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="@string/age_calculator"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!-- Remaining RecyclerViews -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            android:paddingStart="5dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="5dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/birthday_gifs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:fontFamily="@fonts/Roboto-Medium"
+                                android:text="@string/birthday_gifs"
+                                android:textAppearance="@style/customfontstyle"
+                                android:textColor="@color/start_color"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="2dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/bar_color_two" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/more_gifs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:gravity="end"
+                            android:text="More"
+                            android:textColor="@android:color/black"
+                            android:paddingEnd="12dp" />
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_gif"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            android:paddingStart="5dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="5dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/birthday_photo_frames"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:fontFamily="@fonts/Roboto-Medium"
+                                android:text="@string/birthday_photo_frames"
+                                android:textAppearance="@style/customfontstyle"
+                                android:textColor="#03A9F4"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="2dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/bar_color" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/more_photoframes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:gravity="end"
+                            android:text="More"
+                            android:textColor="@android:color/black"
+                            android:paddingEnd="12dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_square"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            android:paddingStart="5dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="5dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/photo_on_cake"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:fontFamily="@fonts/Roboto-Medium"
+                                android:text="@string/photo_on_cake"
+                                android:textAppearance="@style/customfontstyle"
+                                android:textColor="#fd8590"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="2dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/bar_color_three" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/more_photooncake"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:gravity="end"
+                            android:text="More"
+                            android:textColor="@android:color/black"
+                            android:paddingEnd="12dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_cake"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <!-- FrameLayout for Lottie Animation -->
+    <FrameLayout
+        android:id="@+id/magic_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/magic_animation"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/loading_border"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/vertical_swing" />
+    </FrameLayout>
+
+</RelativeLayout>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".Bottomview_Fragments.AllFrameFragment">
+
+
+        <TextView
+            android:id="@+id/shaaa"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@+id/viewpager"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shaaa">
+
+
+
+            <RelativeLayout
+                android:id="@+id/cv_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/viewpager_bg_color"
+                android:descendantFocusability="blocksDescendants">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    &lt;!&ndash; Title &ndash;&gt;
+                  &lt;!&ndash;  <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/app_name"
+                        android:textAppearance="@style/customfontstyle"
+                        android:textColor="@color/black_launch"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:id="@+id/birthday_wish_maker"/>&ndash;&gt;
+
+                    &lt;!&ndash; First Row: Birthday Video Maker and Birthday Photo Frames &ndash;&gt;
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:weightSum="2"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+
+                        &lt;!&ndash; Birthday Video Maker &ndash;&gt;
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_5"
+                            android:layout_width="0dp"
+                            android:layout_height="88dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="2dp"                        app:cardBackgroundColor="@color/transparent"
+                            app:cardCornerRadius="2dp"
+                            app:cardElevation="0dp"
+                            android:focusable="true"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:theme="@style/SelectableItemThemeWhite"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/single_frame_background"
+                               >
+
+                                <ImageView
+                                    android:id="@+id/video_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="3dp"
+                                    android:layout_marginTop="2dp"
+                                    android:contentDescription="@string/video_maker_icon"
+                                    android:scaleType="center"
+                                    android:src="@drawable/video_making_2" />
+
+                                <TextView
+                                    android:id="@+id/birthday_video_maker"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/birthday_video_maker"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                     />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        &lt;!&ndash; Birthday Photo Frames &ndash;&gt;
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/photo_frames_card"
+                            android:layout_width="0dp"
+                            android:layout_height="88dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="2dp"                        app:cardBackgroundColor="@color/transparent"
+                            app:cardCornerRadius="2dp"
+                            app:cardElevation="0dp"
+                            android:focusable="true"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:theme="@style/SelectableItemThemeWhite"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/double_frame_background"
+                               >
+
+                                <ImageView
+                                    android:id="@+id/frames_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:contentDescription="@string/frames_icon"
+                                    android:scaleType="center"
+                                    android:src="@drawable/photo_frame_4" />
+
+                                <TextView
+                                    android:id="@+id/photo_frames"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/photo_frames"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp"
+                                    android:fontFamily="@fonts/Roboto-Medium" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    &lt;!&ndash; Second Row: Greeting Cards, Name on Cake, Photo on Cake &ndash;&gt;
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="3dp"
+                        app:cardBackgroundColor="@color/white">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:weightSum="3">
+
+                            &lt;!&ndash; Greeting Cards &ndash;&gt;
+                            <LinearLayout
+                                android:id="@+id/greeting_cards_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="6dp">
+                                <ImageView
+                                    android:layout_width="31dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/greeting_icon"
+                                    android:src="@drawable/greeting_10_ss"
+                                    app:tint="#6241fe"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/greeting_cards"
+                                    android:textColor="#000000 "
+                                    android:textSize="12sp"
+                                    android:textStyle="normal"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:id="@+id/greeting_card"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            &lt;!&ndash; Name on Cake &ndash;&gt;
+                            <LinearLayout
+                                android:id="@+id/name_on_cake_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:textStyle="bold"
+
+                                android:orientation="vertical"
+                                android:padding="6dp">
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/name_cake_icon"
+                                    android:src="@drawable/name_on_cake_6"
+                                    app:tint="#bf8149"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/name_on_cake"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:id="@+id/name_on_cake"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            &lt;!&ndash; Photo on Cake &ndash;&gt;
+                            <LinearLayout
+                                android:id="@+id/photo_on_cake_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="6dp">
+                                <ImageView
+                                    android:layout_width="31dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/photo_cake_icon"
+                                    android:src="@drawable/photo_on_cake_4"
+                                    app:tint="#009967"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/photo_on_cake"
+                                    android:textColor="#000000  "
+                                    android:textSize="12sp"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:id="@+id/photo_on_cake_card"
+                                    android:textStyle="normal"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    &lt;!&ndash; Third Row: Birthday GIF Stickers, Birthday Quotes, Reminder, Age Calculator &ndash;&gt;
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="3dp"
+                        app:cardBackgroundColor="@color/white">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:weightSum="4">
+
+                            &lt;!&ndash; Birthday GIF Stickers &ndash;&gt;
+                            <LinearLayout
+                                android:id="@+id/gif_stickers_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+                                <ImageView
+                                    android:id="@+id/gif_sticker_img"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="12dp"
+
+                                    android:contentDescription="@string/gif_sticker_icon"
+                                    android:src="@drawable/giff"
+                                    app:tint="#03A9F4"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/birthday_gif_stickers"
+                                    android:textColor="#2B2A2A"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:id="@+id/birthday_gifs_card"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            &lt;!&ndash; Birthday Quotes &ndash;&gt;
+                            <LinearLayout
+                                android:id="@+id/quotes_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/wishes_icon"
+                                    android:src="@drawable/quotes1"
+                                    app:tint="#fd8590"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:text="@string/birthday_quotes"
+                                    android:textColor="#000000  "
+                                    android:textSize="12sp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:id="@+id/birthday_quotes"
+                                    android:textStyle="normal" />
+
+                                &lt;!&ndash;                            android:typeface="serif"&ndash;&gt;
+
+                            </LinearLayout>
+
+                            &lt;!&ndash; Reminder &ndash;&gt;
+                            <LinearLayout
+                                android:id="@+id/reminder_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="12dp"
+
+                                    android:contentDescription="@string/reminder_icon"
+                                    android:src="@drawable/calendar1"
+                                    app:tint="#fcbd71"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:gravity="center"
+                                    android:text="@string/reminder"
+                                    android:id="@+id/reminder"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            &lt;!&ndash; Age Calculator &ndash;&gt;
+                            <LinearLayout
+                                android:id="@+id/age_calculator_option"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="@string/calculator_icon"
+                                    android:src="@drawable/age_calculator_1"
+                                    app:tint="#71E6DA"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/age_calculator"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@fonts/Roboto-Medium"
+                                    android:id="@+id/age_calculator"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+                    &lt;!&ndash; Remaining RecyclerViews &ndash;&gt;
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/birthday_gifs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/birthday_gifs"
+                            android:textAppearance="@style/customfontstyle"
+                            android:textColor="@color/start_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@fonts/Roboto-Medium"
+                            android:layout_marginStart="3dp"
+                            />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/bar_color_two" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_gif"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/birthday_photo_frames"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/birthday_photo_frames"
+                            android:textAppearance="@style/customfontstyle"
+                            android:textColor="#03A9F4"
+                            android:textSize="12sp"
+                            android:layout_marginStart="3dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@fonts/Roboto-Medium"/>
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/bar_color" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_square"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/photo_on_cake"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/photo_on_cake"
+                            android:textAppearance="@style/customfontstyle"
+                            android:textColor="#fd8590"
+                            android:textSize="12sp"
+                            android:fontFamily="@fonts/Roboto-Medium"
+                            android:layout_marginStart="3dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/bar_color_three" />
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_cake"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+
+    -->

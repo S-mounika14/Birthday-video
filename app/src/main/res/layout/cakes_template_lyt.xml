@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/viewpager_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/template_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_theme_bg"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/photo_man_back"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back_from_templetes"
+                android:src="@drawable/back_page_sarees" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:id="@+id/name_cake_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/select_your_cake"
+                android:textAlignment="center"
+                android:textColor="@color/darkgrey"
+                android:textSize="@dimen/textsize_toolbar"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/shaaa"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@+id/template_toolbar"
+        android:background="@drawable/shadow_down" />
+
+    <FrameLayout
+        android:id="@+id/adContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_below="@+id/shaaa"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/template_selection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/adContainerView"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/loading_cakes_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/template_toolbar"
+        android:background="#D48B8B8B"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/progress_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ProgressBar
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:theme="@style/AppTheme.ProgressColor"
+
+                />
+
+            <TextView
+                android:id="@+id/loading_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/please_wait"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/magic_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/magic_animation"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/loading_border"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/vertical_swing" />
+    </FrameLayout>
+
+
+
+</RelativeLayout>

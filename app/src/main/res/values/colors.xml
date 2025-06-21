@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary1">#FFF</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="bgcolorPrimary">#6CE7F1F6</color>
+    <color name="white">#ffffff</color>
+    <color name="dull_White">#bdbdbd</color>
+    <color name="toolbarcolor">#ffffff</color>
+    <color name="Transparent">#00ffffff</color>
+    <color name="darkgrey">#363535</color>
+    <color name="hintcolor">#8F8E8E</color>
+    <color name="saving">#363535</color>
+    <color name="black_launch">#01203A</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="AliceBlue">#F0F8FF</color>
+    <color name="Coral">#FF7F50</color>
+    <color name="Green">#008000</color>
+    <color name="tab_background">#FFEAE9</color>
+    <color name="tab_indicator">#FE8E8D</color>
+    <color name="srb_golden_stars2">#FFC619</color>
+    <color name="light_brown">#F8E8D2</color>
+    <!--<color name="black_transparent">#da000000</color>-->
+    <color name="blue_txt">#0157AC</color>
+    <!--<color name="blue_txt">#024174</color>-->
+    <color name="Black">#000000</color>
+    <color name="Gray">#303030   </color>
+    <color name="red">#E41E1E</color> <!-- White color -->
+    <color name="bluish">#8AC7E3</color>
+    <color name="shrine_pink_100">#4eacf6</color>
+    <color name="shrine_pink_900">#442626</color>
+
+
+    <!--<color name="app_theme_color">#214afc</color>-->
+    <!--<color name="app_theme_color">#194E94</color>-->
+    <color name="app_theme_color">#d6d6d6</color>
+    <color name="default_shadow_color" >#aada1f1f</color>
+    <color name="action_color">#4a4a4a</color>
+    <color name="bg_trans_color">#e6e6e6</color>
+    <color name="transparent_black">#55504848</color>
+    <color name="tab_indicator_color">#808080</color>
+
+    <color name="grey">#808080</color>
+    <color name="White">#ffffff</color>
+
+    <!--<color name="text_icon_color">#1843FF</color>-->
+    <!--<color name="text_icon_color">#c00000</color>-->
+
+    <array name="material_colors">
+        <item>#DC143C</item>
+        <item>#F44336</item>
+        <item>#9C27B0</item>
+        <item>#3F51B5</item>
+        <item>#03A9F4</item>
+        <item>#009688</item>
+        <item>#8BC34A</item>
+
+        <item>#FFEB3B</item>
+        <item>#FF9800</item>
+        <item>#795548</item>
+        <item>#ffffff</item>
+        <item>#607D8B</item>
+        <item>#000000</item>
+
+    </array>
+
+    <color name="blueColorPrimaryDark">#191fd2</color>
+
+    <color name="greyPrimaryDark">#0c1b27</color>
+    <drawable name="waveform_selected">#333333</drawable>
+    <drawable name="waveform_unselected">#595858</drawable>
+    <drawable name="waveform_unselected_bkgnd_overlay">#aba8a8</drawable>
+    <drawable name="selection_border">#0476e7</drawable>
+    <drawable name="playback_indicator">#da190f</drawable>
+    <drawable name="grid_line">#f843e212</drawable>
+    <drawable name="timecode">#333333</drawable>
+    <drawable name="timecode_shadow">#aa000000</drawable>
+
+    <color name="lite_black">#BC000000</color>
+
+
+    <color name="text_color">#00A105</color>
+    <color name="viewpager_bg_color">#fff</color>
+    <color name="txt_shadow_color">#4D4C4C</color>
+    <color name="frame_item_color">#63383844</color>
+
+
+    <color name="sub">#e9e4e4</color>
+
+    <color name="LightGray">#191919</color>
+    <color name="blueColorPrimary">#2196F3</color>
+    <color name="icon_color" >#424140</color>
+    <color name="fonts_rec_bgcolor">#F8F8F8</color>
+    <color name="filter_selected_color">#0EBD15</color>
+    <color name="filter_unselected_color">#00F44336</color>
+
+    <color name="non_focused_color">#43a047</color>
+    <color name="focused_color">#2e7d32</color>
+    <color name="rating_yellow">#f9a825</color>
+    <color name="srb_golden_stars">#C7C7C2</color>
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="banner_ad_bg_creation">#fafafa</color>
+
+    <color name="windowBackground">#0a0a0a</color>
+    <color name="white_color">#ffffff</color>
+    <color name="filter_selected_color1">#E65858</color>
+    <color name="colorPrimaryDark1">#C51162</color>
+    <color name="colorAccent1">#b2dfdb</color>
+    <color name="dialogErrorBackgroundColor">#C1272D</color>
+    <color name="dialogSuccessBackgroundColor">#00b576</color>
+    <color name="theme_color">#FF49DAD8</color>
+    <color name="dialog_red_color">#ff5757</color>
+    <color name="dialog_yellow_color">#ffe13e</color>
+    <color name="dialog_green_color">#97d852</color>
+    <color name="FloralWhite">#fffffaf0</color>
+    <color name="blue_color">#274cd1</color>
+    <color name="all_acts_bottom_bar_color">#c9ff3a76</color>
+    <color name="purple_700">#00BFA5</color>
+    <color name="color_dialog_title">#303030</color>
+    <color name="text_background">#a00a0707</color>
+    <color name="color_dialog_content_prompt">#343434</color>
+    <color name="color_dialog_gray">#ededf3</color>
+    <color name="color_type_info">#F50057</color>
+
+    <color name="non_focused_color1">#43a047</color>
+    <color name="focused_color1">#2e7d32</color>
+    <color name="rating_yellow1">#f9a825</color>
+    <color name="corner_color">#DD2C00</color>
+    <color name="spacing_color">#69CFC5</color>
+    <color name="rating_grey">#9e9e9e</color>
+    <color name="loading">#6CE7F1F6</color>
+    <!--    <color name="srb_golden_stars">#FFC619</color>-->
+    <!--    <color name="grey_3">#f7f7f7</color>-->
+    <!--    <color name="grey_5">#f2f2f2</color>-->
+    <!--    <color name="grey_10">#e6e6e6</color>-->
+    <!--    <color name="grey_20">#cccccc</color>-->
+    <!--    <color name="grey_40">#999999</color>-->
+    <!--    <color name="grey_60">#666666</color>-->
+    <!--    <color name="grey_80">#37474F</color>-->
+    <!--    <color name="grey_90">#263238</color>-->
+    <color name="exit_background_color">#5b5b5b</color>
+    <color name="exit_text_color">#FAFAFA</color>
+    <color name="exit_sub_layout_color">#039DDF</color>
+    <color name="exit_rate_light_color">#0faf0f</color>
+    <color name="exit_rate_dark_color">#0FA30F</color>
+    <color name="exit_exit_button_color">#fb3d0d</color>
+    <color name="rating_color">#FAFAFA</color>
+    <color name="like_color">#37474F</color>
+    <color name="white_dull_color">#FFFFFF</color>
+    <color name="start_color">#f06292</color>
+    <color name="background_color">#FAFAFA</color>
+    <color name="card_background_color">#FAFAFA</color>
+    <color name="edit_text_and_image_color">#2c2c2c</color>
+    <color name="banner_ad_bg_creation1">#f6f6f6</color>
+    <color name="half_black_color">#50000000</color>
+    <color name="clickColor">#ff0000</color>
+    <color name="view_color">#cdcdcd</color>
+    <color name="coordinator_bg_color">#60000000</color>
+    <color name="project_default_black_color">#767373</color>
+    <color name="chip_background_color">#E0E0E0</color>
+    <color name="meterial0">#ffffff</color>
+    <color name="meterial1">#9e9c9c</color>
+    <color name="meterial2">#000000</color>
+    <color name="meterial3">#920101</color>
+    <color name="meterial4">#cc0202</color>
+    <color name="meterial5">#ff0000</color>
+    <color name="meterial6">#ff0072</color>
+    <color name="meterial7">#fc00ff</color>
+    <color name="meterial8">#bf00ff</color>
+    <color name="meterial9">#7200ff</color>
+    <color name="meterial10">#2a00ff</color>
+    <color name="meterial11">#0060ff</color>
+    <color name="meterial12">#00a2ff</color>
+    <color name="meterial13">#00f0ff</color>
+    <color name="meterial14">#027916</color>
+    <color name="meterial15">#01460c</color>
+    <color name="meterial16">#48ff00</color>
+    <color name="meterial17">#baff00</color>
+    <color name="meterial18">#fcff00</color>
+    <color name="meterial19">#ff9600</color>
+    <color name="meterial20">#FCF3CF</color>
+    <color name="meterial21">#F7DC6F</color>
+    <color name="meterial22">#6C3483</color>
+    <color name="meterial23">#BB8FCE</color>
+    <color name="meterial24">#4A235A</color>
+    <color name="meterial25">#D2B4DE</color>
+    <color name="meterial26">#0E6251</color>
+    <color name="meterial27">#16A085</color>
+    <color name="meterial28">#D0ECE7</color>
+    <color name="meterial29">#48C9B0</color>
+    <color name="meterial30">#7D6608</color>
+    <color name="meterial31">#784212</color>
+    <color name="meterial32">#F5B041</color>
+    <color name="meterial33">#FAD7A0</color>
+    <color name="meterial34">#6E2C00</color>
+    <color name="meterial35">#D35400</color>
+    <color name="meterial36">#EDBB99</color>
+    <color name="meterial37">#7B7D7D</color>
+    <color name="meterial38">#D0D3D4</color>
+    <color name="meterial39">#2E4053</color>
+    <color name="meterial40">#FF33E6</color>
+    <color name="meterial41">#A72998</color>
+    <color name="meterial42">#D99AD1</color>
+    <color name="meterial43">#964B8D</color>
+    <color name="meterial44">#684B96</color>
+    <color name="meterial45">#4A2287</color>
+    <color name="meterial46">#3D0691</color>
+    <color name="meterial47">#89C3E2</color>
+    <color name="meterial48">#37A7E3</color>
+    <color name="meterial49">#0A99E6</color>
+    <color name="meterial50">#0AE6D5</color>
+    <color name="meterial51">#6CC8C1</color>
+    <color name="meterial52">#641E16</color>
+    <color name="meterial53">#F1948A</color>
+    <color name="meterial54">#AF7AC5</color>
+    <color name="meterial55">#154360</color>
+    <color name="meterial56">#85C1E9</color>
+    <color name="meterial57">#2E86C1</color>
+    <color name="meterial58">#48C9B0</color>
+    <color name="meterial59">#A2D9CE</color>
+    <color name="meterial60">#27AE60</color>
+    <color name="meterial61">#F5B041</color>
+    <color name="meterial62">#9A7D0A</color>
+    <color name="meterial63">#F9E79F</color>
+
+
+    <color name="s1">#972524</color>
+    <color name="s2">#4e2222</color>
+    <color name="s3">#ff0000</color>
+    <color name="s6">#f30d49</color>
+    <color name="s7">#c11f40</color>
+    <color name="s8">#593535</color>
+    <color name="s10">#ff0b09</color>
+    <color name="s11">#b321a9</color>
+    <color name="s12">#ff7c00</color>
+    <color name="s13">#3f2629</color>
+    <color name="s14">#4c2a2d</color>
+    <color name="s16">#dc0f02</color>
+    <color name="s17">#f8f97a</color>
+    <color name="s18">#411f27</color>
+    <color name="s19">#de183c</color>
+    <color name="s20">#3d1f27</color>
+    <color name="s23">#ff0060</color>
+    <color name="s24">#d40b57</color>
+    <color name="s25">#e40156</color>
+    <color name="s26">#602e37</color>
+    <color name="s27">#f6fa87</color>
+    <color name="s29">#67322a</color>
+
+
+
+
+
+
+    <color name="accent">#DFE5E2E2</color>
+    <color name="Gray27">#454545</color>
+    <color name="LightBlack">#262626</color>
+
+
+
+    <color name="text">#8c8c8c</color>
+
+    <color name="cardview">#ececec</color>
+
+    <color name="sub_background_color">#f0f4f9</color>
+    <color name="bg_color">#232323</color>
+
+
+
+    <color name="selected_tab_color">#FFC7C7C2</color><!-- Transparent color -->
+    <color name="light_selected_tab_color">#FFF8F8F8</color>
+    <color name="default_tab_color">#FFFFFF</color> <!-- White color -->
+
+
+
+
+
+
+
+
+    <color name="WhiteSmoke">#fff5f5f5</color>
+
+
+    <color name="LightWhite">#c9efeded</color>
+
+    <color name="SemiTransparent">#80ffffff</color>
+    <color name="grays">#e5e5e5</color>
+    <color name="text_color_app">#ffffff</color>
+
+    <color name="install_color">#ee8328</color>
+
+    <color name="t1">#00000000</color>
+
+    <color name="t2">#c5c5c3</color>
+    <color name="t3">#f5f5f5</color>
+    <color name="banner_color">#F8F8F8</color>
+    <color name="launch_text_color">#727272</color>
+
+
+</resources>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<resources>-->
+<!--    <color name="colorPrimary">#3F51B5</color>-->
+<!--    <color name="colorPrimary1">#FFF</color>-->
+<!--    <color name="colorPrimaryDark">#ffffff</color>-->
+<!--    <color name="colorAccent">#FF4081</color>-->
+<!--    <color name="bgcolorPrimary">#6CE7F1F6</color>-->
+<!--    <color name="white">#ffffff</color>-->
+<!--    <color name="toolbarcolor">#ffffff</color>-->
+<!--    <color name="darkgrey">#363535</color>-->
+<!--    <color name="hintcolor">#8F8E8E</color>-->
+<!--    <color name="saving">#363535</color>-->
+<!--    <color name="black_launch">#01203A</color>-->
+<!--    <color name="black">#000000</color>-->
+<!--    <color name="transparent">#00ffffff</color>-->
+<!--    <color name="AliceBlue">#F0F8FF</color>-->
+<!--    <color name="Coral">#FF7F50</color>-->
+<!--    <color name="Green">#008000</color>-->
+<!--    <color name="tab_background">#FFEAE9</color>-->
+<!--    <color name="tab_indicator">#FE8E8D</color>-->
+<!--    <color name="srb_golden_stars2">#FFC619</color>-->
+<!--    <color name="light_brown">#F8E8D2</color>-->
+<!--    &lt;!&ndash;<color name="black_transparent">#da000000</color>&ndash;&gt;-->
+<!--    <color name="blue_txt">#0157AC</color>-->
+<!--    &lt;!&ndash;<color name="blue_txt">#024174</color>&ndash;&gt;-->
+<!--    <color name="Black">#000000</color>-->
+<!--    <color name="Gray">#303030   </color>-->
+<!--    <color name="red">#E41E1E</color> &lt;!&ndash; White color &ndash;&gt;-->
+<!--    <color name="bluish">#8AC7E3</color>-->
+
+
+<!--    &lt;!&ndash;<color name="app_theme_color">#214afc</color>&ndash;&gt;-->
+<!--    &lt;!&ndash;<color name="app_theme_color">#194E94</color>&ndash;&gt;-->
+<!--    <color name="app_theme_color">#d6d6d6</color>-->
+<!--    <color name="default_shadow_color" >#aada1f1f</color>-->
+<!--    <color name="action_color">#4a4a4a</color>-->
+<!--    <color name="bg_trans_color">#e6e6e6</color>-->
+<!--    <color name="transparent_black">#55504848</color>-->
+<!--    <color name="tab_indicator_color">#808080</color>-->
+
+<!--    <color name="grey">#808080</color>-->
+<!--    <color name="White">#ffffff</color>-->
+
+<!--    &lt;!&ndash;<color name="text_icon_color">#1843FF</color>&ndash;&gt;-->
+<!--    &lt;!&ndash;<color name="text_icon_color">#c00000</color>&ndash;&gt;-->
+
+<!--    <array name="material_colors">-->
+<!--        <item>#DC143C</item>-->
+<!--        <item>#F44336</item>-->
+<!--        <item>#9C27B0</item>-->
+<!--        <item>#3F51B5</item>-->
+<!--        <item>#03A9F4</item>-->
+<!--        <item>#009688</item>-->
+<!--        <item>#8BC34A</item>-->
+
+<!--        <item>#FFEB3B</item>-->
+<!--        <item>#FF9800</item>-->
+<!--        <item>#795548</item>-->
+<!--        <item>#ffffff</item>-->
+<!--        <item>#607D8B</item>-->
+<!--        <item>#000000</item>-->
+
+<!--    </array>-->
+
+<!--    <color name="blueColorPrimaryDark">#191fd2</color>-->
+
+<!--    <color name="greyPrimaryDark">#0c1b27</color>-->
+<!--    <drawable name="waveform_selected">#33b5e5</drawable>-->
+<!--    <drawable name="waveform_unselected">#2a736f</drawable>-->
+<!--    <drawable name="waveform_unselected_bkgnd_overlay">#aba8a8</drawable>-->
+<!--    <drawable name="selection_border">#0476e7</drawable>-->
+<!--    <drawable name="playback_indicator">#da190f</drawable>-->
+<!--    <drawable name="grid_line">#f843e212</drawable>-->
+<!--    <drawable name="timecode">#6607d2</drawable>-->
+<!--    <drawable name="timecode_shadow">#aa000000</drawable>-->
+
+<!--    <color name="lite_black">#BC000000</color>-->
+
+
+<!--    <color name="text_color">#00A105</color>-->
+<!--    <color name="viewpager_bg_color">#fff</color>-->
+<!--    <color name="txt_shadow_color">#4D4C4C</color>-->
+<!--    <color name="frame_item_color">#63383844</color>-->
+
+
+<!--    <color name="sub">#e9e4e4</color>-->
+
+<!--    <color name="LightGray">#191919</color>-->
+<!--    <color name="blueColorPrimary">#2196F3</color>-->
+<!--    <color name="icon_color" >#424140</color>-->
+<!--    <color name="fonts_rec_bgcolor">#F8F8F8</color>-->
+<!--    <color name="filter_selected_color">#0EBD15</color>-->
+<!--    <color name="filter_unselected_color">#00F44336</color>-->
+
+<!--    <color name="non_focused_color">#43a047</color>-->
+<!--    <color name="focused_color">#2e7d32</color>-->
+<!--    <color name="rating_yellow">#f9a825</color>-->
+<!--    <color name="srb_golden_stars">#C7C7C2</color>-->
+<!--    <color name="grey_3">#f7f7f7</color>-->
+<!--    <color name="grey_5">#f2f2f2</color>-->
+<!--    <color name="grey_10">#e6e6e6</color>-->
+<!--    <color name="grey_20">#cccccc</color>-->
+<!--    <color name="grey_40">#999999</color>-->
+<!--    <color name="grey_60">#666666</color>-->
+<!--    <color name="grey_80">#37474F</color>-->
+<!--    <color name="grey_90">#263238</color>-->
+<!--    <color name="banner_ad_bg_creation">#fafafa</color>-->
+
+<!--    <color name="windowBackground">#0a0a0a</color>-->
+<!--    <color name="white_color">#ffffff</color>-->
+<!--    <color name="filter_selected_color1">#E65858</color>-->
+<!--    <color name="colorPrimaryDark1">#C51162</color>-->
+<!--    <color name="colorAccent1">#b2dfdb</color>-->
+<!--    <color name="dialogErrorBackgroundColor">#C1272D</color>-->
+<!--    <color name="dialogSuccessBackgroundColor">#00b576</color>-->
+<!--    <color name="theme_color">#FF49DAD8</color>-->
+<!--    <color name="dialog_red_color">#ff5757</color>-->
+<!--    <color name="dialog_yellow_color">#ffe13e</color>-->
+<!--    <color name="dialog_green_color">#97d852</color>-->
+<!--    <color name="FloralWhite">#fffffaf0</color>-->
+<!--    <color name="blue_color">#274cd1</color>-->
+<!--    <color name="all_acts_bottom_bar_color">#c9ff3a76</color>-->
+<!--    <color name="purple_700">#00BFA5</color>-->
+<!--    <color name="color_dialog_title">#303030</color>-->
+<!--    <color name="text_background">#a00a0707</color>-->
+<!--    <color name="color_dialog_content_prompt">#343434</color>-->
+<!--    <color name="color_dialog_gray">#ededf3</color>-->
+<!--    <color name="color_type_info">#F50057</color>-->
+
+<!--    <color name="non_focused_color1">#43a047</color>-->
+<!--    <color name="focused_color1">#2e7d32</color>-->
+<!--    <color name="rating_yellow1">#f9a825</color>-->
+<!--    <color name="corner_color">#DD2C00</color>-->
+<!--    <color name="spacing_color">#69CFC5</color>-->
+<!--    <color name="rating_grey">#9e9e9e</color>-->
+<!--    <color name="loading">#6CE7F1F6</color>-->
+<!--&lt;!&ndash;    <color name="srb_golden_stars">#FFC619</color>&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="grey_3">#f7f7f7</color>&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="grey_5">#f2f2f2</color>&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="grey_10">#e6e6e6</color>&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="grey_20">#cccccc</color>&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="grey_40">#999999</color>&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="grey_60">#666666</color>&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="grey_80">#37474F</color>&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="grey_90">#263238</color>&ndash;&gt;-->
+<!--    <color name="exit_background_color">#5b5b5b</color>-->
+<!--    <color name="exit_text_color">#FAFAFA</color>-->
+<!--    <color name="exit_sub_layout_color">#039DDF</color>-->
+<!--    <color name="exit_rate_light_color">#0faf0f</color>-->
+<!--    <color name="exit_rate_dark_color">#0FA30F</color>-->
+<!--    <color name="exit_exit_button_color">#fb3d0d</color>-->
+<!--    <color name="rating_color">#FAFAFA</color>-->
+<!--    <color name="like_color">#37474F</color>-->
+<!--    <color name="white_dull_color">#FFFFFF</color>-->
+<!--    <color name="start_color">#f06292</color>-->
+<!--    <color name="background_color">#FAFAFA</color>-->
+<!--    <color name="card_background_color">#FAFAFA</color>-->
+<!--    <color name="edit_text_and_image_color">#2c2c2c</color>-->
+<!--    <color name="banner_ad_bg_creation1">#f6f6f6</color>-->
+<!--    <color name="clickColor">#ff0000</color>-->
+<!--    <color name="view_color">#cdcdcd</color>-->
+<!--    <color name="coordinator_bg_color">#60000000</color>-->
+<!--    <color name="project_default_black_color">#767373</color>-->
+<!--    <color name="chip_background_color">#E0E0E0</color>-->
+<!--    <color name="meterial0">#ffffff</color>-->
+<!--    <color name="meterial1">#9e9c9c</color>-->
+<!--    <color name="meterial2">#000000</color>-->
+<!--    <color name="meterial3">#920101</color>-->
+<!--    <color name="meterial4">#cc0202</color>-->
+<!--    <color name="meterial5">#ff0000</color>-->
+<!--    <color name="meterial6">#ff0072</color>-->
+<!--    <color name="meterial7">#fc00ff</color>-->
+<!--    <color name="meterial8">#bf00ff</color>-->
+<!--    <color name="meterial9">#7200ff</color>-->
+<!--    <color name="meterial10">#2a00ff</color>-->
+<!--    <color name="meterial11">#0060ff</color>-->
+<!--    <color name="meterial12">#00a2ff</color>-->
+<!--    <color name="meterial13">#00f0ff</color>-->
+<!--    <color name="meterial14">#027916</color>-->
+<!--    <color name="meterial15">#01460c</color>-->
+<!--    <color name="meterial16">#48ff00</color>-->
+<!--    <color name="meterial17">#baff00</color>-->
+<!--    <color name="meterial18">#fcff00</color>-->
+<!--    <color name="meterial19">#ff9600</color>-->
+<!--    <color name="meterial20">#FCF3CF</color>-->
+<!--    <color name="meterial21">#F7DC6F</color>-->
+<!--    <color name="meterial22">#6C3483</color>-->
+<!--    <color name="meterial23">#BB8FCE</color>-->
+<!--    <color name="meterial24">#4A235A</color>-->
+<!--    <color name="meterial25">#D2B4DE</color>-->
+<!--    <color name="meterial26">#0E6251</color>-->
+<!--    <color name="meterial27">#16A085</color>-->
+<!--    <color name="meterial28">#D0ECE7</color>-->
+<!--    <color name="meterial29">#48C9B0</color>-->
+<!--    <color name="meterial30">#7D6608</color>-->
+<!--    <color name="meterial31">#784212</color>-->
+<!--    <color name="meterial32">#F5B041</color>-->
+<!--    <color name="meterial33">#FAD7A0</color>-->
+<!--    <color name="meterial34">#6E2C00</color>-->
+<!--    <color name="meterial35">#D35400</color>-->
+<!--    <color name="meterial36">#EDBB99</color>-->
+<!--    <color name="meterial37">#7B7D7D</color>-->
+<!--    <color name="meterial38">#D0D3D4</color>-->
+<!--    <color name="meterial39">#2E4053</color>-->
+<!--    <color name="meterial40">#FF33E6</color>-->
+<!--    <color name="meterial41">#A72998</color>-->
+<!--    <color name="meterial42">#D99AD1</color>-->
+<!--    <color name="meterial43">#964B8D</color>-->
+<!--    <color name="meterial44">#684B96</color>-->
+<!--    <color name="meterial45">#4A2287</color>-->
+<!--    <color name="meterial46">#3D0691</color>-->
+<!--    <color name="meterial47">#89C3E2</color>-->
+<!--    <color name="meterial48">#37A7E3</color>-->
+<!--    <color name="meterial49">#0A99E6</color>-->
+<!--    <color name="meterial50">#0AE6D5</color>-->
+<!--    <color name="meterial51">#6CC8C1</color>-->
+<!--    <color name="meterial52">#641E16</color>-->
+<!--    <color name="meterial53">#F1948A</color>-->
+<!--    <color name="meterial54">#AF7AC5</color>-->
+<!--    <color name="meterial55">#154360</color>-->
+<!--    <color name="meterial56">#85C1E9</color>-->
+<!--    <color name="meterial57">#2E86C1</color>-->
+<!--    <color name="meterial58">#48C9B0</color>-->
+<!--    <color name="meterial59">#A2D9CE</color>-->
+<!--    <color name="meterial60">#27AE60</color>-->
+<!--    <color name="meterial61">#F5B041</color>-->
+<!--    <color name="meterial62">#9A7D0A</color>-->
+<!--    <color name="meterial63">#F9E79F</color>-->
+
+
+<!--    <color name="s1">#972524</color>-->
+<!--    <color name="s2">#4e2222</color>-->
+<!--    <color name="s3">#ff0000</color>-->
+<!--    <color name="s6">#f30d49</color>-->
+<!--    <color name="s7">#c11f40</color>-->
+<!--    <color name="s8">#593535</color>-->
+<!--    <color name="s10">#ff0b09</color>-->
+<!--    <color name="s11">#b321a9</color>-->
+<!--    <color name="s12">#ff7c00</color>-->
+<!--    <color name="s13">#3f2629</color>-->
+<!--    <color name="s14">#4c2a2d</color>-->
+<!--    <color name="s16">#dc0f02</color>-->
+<!--    <color name="s17">#f8f97a</color>-->
+<!--    <color name="s18">#411f27</color>-->
+<!--    <color name="s19">#de183c</color>-->
+<!--    <color name="s20">#3d1f27</color>-->
+<!--    <color name="s23">#ff0060</color>-->
+<!--    <color name="s24">#d40b57</color>-->
+<!--    <color name="s25">#e40156</color>-->
+<!--    <color name="s26">#602e37</color>-->
+<!--    <color name="s27">#f6fa87</color>-->
+<!--    <color name="s29">#67322a</color>-->
+
+
+
+
+
+
+<!--    <color name="accent">#DFE5E2E2</color>-->
+<!--    <color name="Gray27">#454545</color>-->
+<!--    <color name="LightBlack">#262626</color>-->
+
+
+
+<!--    <color name="text">#8c8c8c</color>-->
+
+<!--    <color name="cardview">#ececec</color>-->
+
+<!--    <color name="sub_background_color">#f0f4f9</color>-->
+<!--    <color name="bg_color">#232323</color>-->
+
+<!--&lt;!&ndash;    <color name="pressed_tab_color">#66000000</color> &lt;!&ndash; Slightly transparent dark color for the pressed state &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="light_selected_tab_color">#FFF8F8F8</color> &lt;!&ndash; Light grey color for the final selected state &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <color name="default_tab_color">#FFFFFF</color> &lt;!&ndash; White color for the default tab text &ndash;&gt;&ndash;&gt;-->
+
+
+
+<!--    <color name="selected_tab_color">#FFC7C7C2</color>&lt;!&ndash; Transparent color &ndash;&gt;-->
+<!--    <color name="light_selected_tab_color">#FFF8F8F8</color>-->
+<!--    <color name="default_tab_color">#FFFFFF</color> &lt;!&ndash; White color &ndash;&gt;-->
+
+
+
+<!--</resources>-->

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.carousel.MaskableFrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    app:shapeAppearance="@style/ShapeAppearanceOverlay.Custom.CornerSize">
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:orientation="vertical">-->
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clgcard12"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:scaleType="fitCenter">
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        app:cardBackgroundColor="@color/transparent"-->
+        <!--        android:layout_margin="3.9dp"-->
+        <!--        app:cardCornerRadius="2dp">-->
+
+        <!-- RelativeLayout to allow proper alignment -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparent">
+
+            <!-- Main color ImageView -->
+            <ImageView
+                android:id="@+id/color_iv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/background_image" />
+
+
+            <!-- Border View overlay -->
+            <View
+                android:id="@+id/border_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignTop="@id/color_iv12"
+                android:layout_alignBottom="@id/color_iv12"
+                android:layout_alignLeft="@id/color_iv12"
+                android:layout_alignRight="@id/color_iv12"
+                android:background="@drawable/selected_frame_item_bg"
+                android:layout_marginRight="3dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</com.google.android.material.carousel.MaskableFrameLayout>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/color_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/color_icon"
+                android:src="@drawable/rounded_border_white2" />
+
+            <ImageView
+                android:id="@+id/selection_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/color_icon"
+                android:src="@drawable/ic_done_transparent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/round_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/color_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>-->

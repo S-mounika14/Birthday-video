@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewpager_bg_color"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/tool_arrange_pics"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_theme_bg"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/video_arrange_back"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:contentDescription="@string/back_man_style_image"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back_from_video_picker"
+                android:src="@drawable/back_page_sarees" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:id="@+id/tool_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/arrange_photos"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textColor="@color/darkgrey"
+                android:textAppearance="@style/customfontstyle"
+                android:textSize="@dimen/textsize_toolbar"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="15dp"
+            android:src="@drawable/add_button" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|right"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/toolbardone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|center"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/my_bgss"
+                android:contentDescription="@string/next_click"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/next"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="normal"
+                        android:textAppearance="@style/customfontstyle"/>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/shadowutop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_down"
+        android:contentDescription="@string/shadowtop"
+        android:layout_below="@+id/tool_arrange_pics"
+        android:minHeight="6.0dip" />
+
+    <FrameLayout
+        android:id="@+id/adContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/shadowutop"/>
+
+
+    <com.birthday.video.maker.Birthday_Video.video_maker.dynamicgrid.DynamicGridView
+        android:id="@+id/dynamic_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/adContainerView"
+        android:numColumns="3" />
+
+    <LinearLayout
+        android:id="@+id/cropOptions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+
+        <Button
+            android:id="@+id/original"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_background"
+            android:text="@string/original"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/scaled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_background"
+            android:text="@string/square"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

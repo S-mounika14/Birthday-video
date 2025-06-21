@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:background="@color/transparent"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:id="@+id/tool_man"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/toolbar_theme_bg"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/photo_man_video"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:contentDescription="@string/back_from_videomaker"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/back_page_icon"
+                    android:src="@drawable/back_page_sarees" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.7">
+
+                <TextView
+                    android:id="@+id/tool_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/video_preview"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="@dimen/textsize_toolbar"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|right"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+
+                >
+
+              <!--  <LinearLayout
+                    android:id="@+id/done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/text_bg"
+                    android:contentDescription="done_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">-->
+
+
+                        <TextView
+                            android:id="@+id/done"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/my_bgss"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="13dp"
+                            android:layout_marginTop="1dp"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:paddingStart="15dp"
+                            android:paddingLeft="10dp"
+                            android:paddingEnd="15dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/save1"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/edit_text_and_image_color" />
+
+                       <!-- <TextView
+                            android:id="@+id/maintext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:text="@string/save"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/customfontstyle"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/maintext"
+                            android:background="@drawable/cr6"
+                            android:clickable="false"
+                            android:contentDescription="done_main_image"
+                            android:src="@drawable/ic_save_green_24dp" />-->
+
+
+<!--                </LinearLayout>-->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/shadowutop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_man"
+            android:background="@drawable/shadow_down"
+            android:contentDescription="@string/shadowtop"
+            android:minHeight="6.0dip" />
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/shadowutop"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/scaleRelLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.birthday.video.maker.Birthday_Video.video_maker.view.PreviewImageView
+                    android:id="@+id/previewImageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:backgroundTint="@color/transparent" />
+
+                <RelativeLayout
+                    android:id="@+id/center_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+
+                    <RelativeLayout
+                        android:id="@+id/txt_stkr_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/video_clicker"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/previewImageView1"
+                    android:layout_alignBottom="@+id/previewImageView1"
+                    android:background="@drawable/bg_card_transparent"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <RelativeLayout
+                    android:id="@+id/captureRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/previewImageView1"
+                    android:layout_alignBottom="@+id/previewImageView1"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/ivFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/video_image"
+                        android:scaleType="fitXY"/>
+
+
+                    <TextView
+                        android:id="@+id/preview_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible" />
+                    <RelativeLayout
+                        android:id="@+id/txt_stkr_rel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/stickerview">
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+<!--
+                <LinearLayout
+                    android:id="@+id/flLoader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/previewImageView1"
+                    android:layout_alignBottom="@+id/previewImageView1"
+                    android:background="#88000000"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/video_progress_bg"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ProgressBar
+                            android:id="@+id/loader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="3dp"
+                            android:theme="@style/AppTheme.ProgressColor" />
+
+                        <TextView
+                            android:id="@+id/loading_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="@string/loading"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+-->
+
+                <FrameLayout
+                    android:id="@+id/magic_animation_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    tools:ignore="DuplicateIds">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/magic_animation"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/loading_border"
+                        android:layout_gravity="center"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/vertical_swing"
+                        tools:ignore="DuplicateIds" />
+
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/ivPlayPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/play_grey_bg"
+                    android:contentDescription="@string/video_play_icon"
+                    android:src="@drawable/ic_play_button_30"
+                    android:visibility="invisible" />
+
+                <!--seekbar layout-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="4.0dip"
+                        android:text="00:00"
+                        android:textColor="@color/white" />
+
+                    <SeekBar
+                        android:id="@+id/sbPlayTime"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0"
+                        android:enabled="false"
+                        android:padding="10.0dip"
+                        android:progressBackgroundTint="@color/Green"
+                        android:progressTint="@color/white"
+                        android:thumbTint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvEndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="4.0dip"
+                        android:paddingRight="12.0dip"
+                        android:text="00:00"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/scaleRelLayout"
+                android:background="@drawable/grey_color_shadow_bottom_top"
+                android:contentDescription="@string/shadow_image"
+                android:minHeight="6.0dip"
+                android:visibility="visible" />
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_below="@+id/scaleRelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:tabGravity="fill"
+
+                    app:tabIndicatorColor="@color/white"
+                    app:tabSelectedTextColor="@color/white">
+
+
+                </com.google.android.material.tabs.TabLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/view_pager_rel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white">
+
+                <com.birthday.video.maker.Birthday_Video.activity.CustomViewPager
+                    android:id="@+id/view_pager_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/viewPager_fragment_height"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/white">
+                </com.birthday.video.maker.Birthday_Video.activity.CustomViewPager>
+
+                <LinearLayout
+                    android:id="@+id/stickerPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_alignParentBottom="false"
+
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/tab_indicator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabstickers"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:tabIconTint="@null"
+                            android:background="@color/tab_background"
+                            app:tabGravity="center"
+                            app:tabIndicator="@drawable/tab_indicator"
+                            app:tabIndicatorColor="@color/tab_indicator"
+                            app:tabIndicatorGravity="bottom"
+                            app:tabIndicatorHeight="4dp"
+                            app:tabMode="scrollable"
+                            app:tabPaddingEnd="-10dp"
+                            app:tabPaddingStart="-10dp" />
+
+                        <ImageView
+                            android:id="@+id/close_stickers"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/baseline_clear_24"
+                            app:tint="@color/black" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/tab_indicator" />
+
+                    <!-- ViewPager for Tabs, inside the parent LinearLayout -->
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpagerstickers"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <include layout="@layout/new_main_text_optionslayout" />
+
+
+        <RelativeLayout
+            android:id="@+id/lay_TextMain_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/text_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="2dp"
+                android:background="#ffffff"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/fontsShow_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/fonts_recycler_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/colorShow_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/subcolors_recycler_text_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:scrollbars="none"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/colors_recycler_text_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:scrollbars="none"
+                            android:visibility="gone" />
+
+                        <com.birthday.video.maker.NewColorSeekBar
+                            android:id="@+id/txt_color_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15.0dip"
+                            android:layout_marginRight="15.0dip"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            app:colorSeeds="@array/material_colors" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <!--loading-->
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lite_black"
+        android:gravity="center"
+        android:onClick="dummy"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/avi"
+                android:layout_width="200dp"
+                android:layout_height="160dp"
+                android:background="@drawable/loading_border"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/vertical_swing" />
+
+
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/creating_video"
+                android:textAppearance="@style/customfontstyle"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/magic_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/magic_animations"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/loading_border"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/vertical_swing" />
+
+
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>

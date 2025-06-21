@@ -1,0 +1,74 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/time_seekbar_layout"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="@dimen/viewPager_fragment_height"
+    android:layout_centerInParent="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/duration_for_each_frame"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="7">
+
+        <TextView
+            android:id="@+id/tvDurationFast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/fast"
+            android:textColor="@color/black" />
+
+
+
+        <bubbleseekbar.bubbleseekbar.src.main.java.com.xw.repo.BubbleSeekBar
+            android:id="@+id/seekbarDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:layout_gravity="center"
+            app:bsb_auto_adjust_section_mark="true"
+            app:bsb_max="4"
+            app:bsb_min="1.0"
+            app:bsb_bubble_color="#00ffffff"
+            app:bsb_bubble_text_color="#00ffffff"
+            app:bsb_second_track_color="#16D320"
+            app:bsb_section_count="3"
+            app:bsb_section_text_color="@color/black"
+            app:bsb_section_text_position="below_section_mark"
+            app:bsb_show_section_mark="true"
+            app:bsb_show_section_text="true"
+            app:bsb_show_thumb_text="true"
+            app:bsb_thumb_text_size="18sp"
+            app:bsb_touch_to_seek="true" />
+
+
+        <TextView
+            android:id="@+id/tvDurationSlow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/slow"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.carousel.MaskableFrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:fitsSystemWindows="true"
+    app:shapeAppearance="@style/ShapeAppearanceOverlay.Custom.CornerSize">
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:orientation="vertical">-->
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clgcard"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:scaleType="fitCenter">
+
+        <!-- RELATIVE LAYOUT enables alignment rules -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparent">
+
+            <!-- Main Image -->
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/background_image" />
+
+
+
+            <!-- Border View (overlay) -->
+            <View
+                android:id="@+id/border_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignTop="@id/iv"
+                android:layout_alignBottom="@id/iv"
+                android:layout_alignLeft="@id/iv"
+                android:layout_alignRight="@id/iv"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/selected_frame_item_bg"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</com.google.android.material.carousel.MaskableFrameLayout>

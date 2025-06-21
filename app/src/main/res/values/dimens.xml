@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_size_normal">66dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_size_normal1">86dp</dimen>
+    <dimen name="fab_size_mini1">60dp</dimen>
+
+    <dimen name="default_corner_radius">3dp</dimen>
+    <dimen name="default_shadow_radius">3dp</dimen>
+    <dimen name="dgv_overlap_if_switch_straight_line">16dp</dimen>
+    <dimen name="textsize_toolbar">18sp</dimen>
+    <dimen name="viewPager_fragment_height">200dp</dimen>
+
+    <dimen name="rippleStrokeWidth">2dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="top_sheet_modal_elevation">16dp</dimen>
+    <dimen name="top_sheet_modal_peek_height">256dp</dimen>
+
+
+    <dimen name="view_pager_margin_top">90dp</dimen>
+
+
+
+    <dimen name="rippleRadius">64dp</dimen>
+
+
+    <dimen name="horizontal_margin">8dp</dimen>
+
+</resources>

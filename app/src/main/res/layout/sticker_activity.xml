@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/viewpager_bg_color">
+
+    <LinearLayout
+        android:id="@+id/toolbar_stickers"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_theme_bg"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/back_from_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:contentDescription="@string/back_from_frames_viewpager"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back_page_icon"
+                android:src="@drawable/back_page_sarees" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:id="@+id/tool_frames_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/choose_frames"
+                android:textAlignment="center"
+                android:textColor="@color/darkgrey"
+                android:textSize="@dimen/textsize_toolbar"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:gravity="center_horizontal" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/shadowutop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_stickers"
+        android:background="@drawable/shadow_down"
+        android:contentDescription="@string/shadowtop"
+        android:minHeight="6.0dip" />
+
+    <FrameLayout
+        android:id="@+id/adContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/shadowutop"/>
+
+    <RelativeLayout
+        android:id="@+id/cv_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/adContainerView"
+        android:background="#ffffff"
+        >
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:visibility="visible"
+            app:tabGravity="center"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            app:tabIndicator="@drawable/underline"
+            app:tabIndicatorColor="@color/blue_color"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/cv_tab">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

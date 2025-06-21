@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+   >
+
+    <LinearLayout
+        android:id="@+id/nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueColorPrimary"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age_calculator_result"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/age_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:paddingVertical="1dp"
+                android:background="@drawable/rounded_bottom_background">
+
+                <TextView
+                    android:id="@+id/age_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_age"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/years_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FFD700"
+                            android:textSize="38sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/years"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#146c8e"
+                        android:layout_marginLeft="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/period_months_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FFD700"
+                            android:textSize="38sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/months_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/months"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#146c8e"
+                        android:layout_marginLeft="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/days_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FFD700"
+                            android:textSize="38sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/days_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/days"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Next Birthday Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_upcoming_birthday_in"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="3dp"
+                    android:textColor="#14779a"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/next_birthday_total_months_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:id="@+id/next_months_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/months"
+                            android:padding="5dp"
+                            android:textSize="14sp"
+                            android:textColor="#18759d"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#e3e3e3"
+                        android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/next_birthday_total_days_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="#000"/>
+
+                            <TextView
+                                android:id="@+id/next_days_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/days"
+                                android:textSize="14sp"
+                                android:textColor="#18759d"
+                                android:padding="5dp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="#e3e3e3"
+                            android:layout_marginHorizontal="16dp"/>
+
+                        <TextView
+                            android:id="@+id/next_birthday_weekday_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#e4e4e4"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Birthday Countdown -->
+                <TextView
+                    android:id="@+id/birthday_countdown_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/birthday_countdown_in"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="3dp"
+                    android:textColor="#14779a"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/countdown_days_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"/>
+
+
+                        <TextView
+                            android:id="@+id/countdown_days_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/days"
+                            android:textColor="#18759d"
+                            android:textSize="14sp"
+                            android:padding="5dp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#e3e3e3"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/countdown_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_seconds"
+                            android:textColor="#18759d"
+                            android:textSize="14sp"
+                            android:padding="5dp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Horizontal Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#e4e4e4"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Half Birthday -->
+                <TextView
+                    android:id="@+id/half_birthday_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/half_birthday"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="3dp"
+                    android:textColor="#14779a"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/half_birthday_day_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/half_birthday_month_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:background="#e3e3e3"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/half_birthday_weekday_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"/>
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/half_birthday_icon"-->
+                    <!--                        android:layout_width="30dp"-->
+                    <!--                        android:layout_height="30dp"-->
+                    <!--                        android:src="@drawable/ic_half_birthday"-->
+                    <!--                        android:layout_marginStart="48dp"-->
+                    <!--                        android:visibility="gone"/>-->
+                </LinearLayout>
+
+                <!-- Horizontal Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#e4e4e4"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Total Summary Section -->
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Summary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="3dp"
+                    android:textColor="#14779a"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/period_week_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Weeks"
+                            android:textColor="#18759d"
+                            android:textSize="14sp"
+                            android:padding="5dp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#e3e3e3"
+                        android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/hours_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hours"
+                            android:textColor="#18759d"
+                            android:textSize="14sp"
+                            android:padding="5dp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#e3e3e3"
+                        android:layout_marginHorizontal="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/minutes_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Minutes"
+                            android:textColor="#18759d"
+                            android:textSize="14sp"
+                            android:padding="5dp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

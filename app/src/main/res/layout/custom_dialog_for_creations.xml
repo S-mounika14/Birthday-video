@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/delete_dialog_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:lineSpacingExtra="3dp"
+            android:padding="20dp"
+            android:text="@string/delete_custom_text"
+            android:textColor="@color/darkgrey"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAppearance="@style/customfontstyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                card:cardElevation="2dp"
+                card:cardCornerRadius="5dp"
+                card:cardUseCompatPadding="true"
+                card:cardBackgroundColor="@color/darkgrey">
+
+                <Button
+                    android:id="@+id/negative_button_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:contentDescription="@string/cancel_dialog"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/no_click"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                card:cardElevation="2dp"
+                card:cardUseCompatPadding="true"
+                card:cardCornerRadius="5dp"
+                card:cardBackgroundColor="@color/darkgrey">
+
+                <Button
+                    android:id="@+id/positive_button_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:contentDescription="@string/ok"
+                    android:paddingRight="45dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/yes_click"
+                    android:textAppearance="@style/customfontstyle"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_circle_white"
+        android:src="@drawable/cancel"
+        android:contentDescription="@string/cancel_dialog" />
+
+
+</RelativeLayout>

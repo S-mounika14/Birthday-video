@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/filter_relative_layout"
+    android:layout_alignParentBottom="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <RelativeLayout
+        android:id="@+id/filters_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/white"
+        android:visibility= "gone"
+        tools:ignore="UselessParent">
+
+
+        <FrameLayout
+            android:id="@+id/reset"
+            android:layout_width="210dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="5dp"
+            android:visibility= "gone">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_refresh"
+                android:visibility="visible"
+                app:tint="#414a4c" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:paddingStart="35dp"
+                android:text="@string/reset"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#414a4c"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/tick_mark"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_done"
+            android:visibility="visible"
+            app:tint="#414a4c" />
+
+
+        <LinearLayout
+            android:id="@+id/filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+
+                android:id="@+id/show_filter_relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <View
+                    android:id="@+id/filters_bar"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#414a4c"
+                    android:importantForAccessibility="no"
+                    android:paddingBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/filters_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingTop="3dp"
+                    android:text="@string/filter"
+                    android:textColor="#414a4c"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/show_edit_relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <View
+                    android:id="@+id/edit_bar"
+                    android:layout_width="45dp"
+
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#414a4c"
+                    android:importantForAccessibility="no"
+                    android:visibility="invisible" />
+
+
+                <TextView
+                    android:id="@+id/edit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/adjust"
+                    android:textColor="#414a4c"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/effect_recycler1"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@+id/filter_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/edit_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filter_layout"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- SeekBar -->
+                    <com.birthday.video.maker.Birthday_Video.activity.TwoLineSeekBar
+
+                        android:id="@+id/brightness_seekbar1"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        app:high_color="#414a4c"
+                        app:line_color="#C1C0C0"
+                        app:line_width="3dp"
+                        app:nail_color="#414a4c"
+                        app:nail_radius="1dp"
+                        app:thumb_radius="7dp"
+
+
+                        app:thumb_color="#414a4c"
+                        tools:ignore="MissingClass" />
+
+                    <!-- TextView (SeekBar Value) -->
+                    <TextView
+                        android:id="@+id/brightness_value1"
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#414a4c"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.birthday.video.maker.Birthday_Video.activity.TwoLineSeekBar
+                        android:id="@+id/contrast_seekbar1"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        app:high_color="#414a4c"
+                        app:line_color="#C1C0C0"
+                        app:line_width="3dp"
+                        app:nail_color="#414a4c"
+                        app:nail_radius="1dp"
+                        app:thumb_radius="7dp"
+
+                        app:thumb_color="#414a4c" />
+
+                    <TextView
+                        android:id="@+id/contrast_value1"
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+
+
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#414a4c"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.birthday.video.maker.Birthday_Video.activity.TwoLineSeekBar
+                        android:id="@+id/saturation_seekbar1"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        app:high_color="#414a4c"
+                        app:line_color="#C1C0C0"
+                        app:line_width="3dp"
+                        app:nail_color="#414a4c"
+                        app:nail_radius="1dp"
+                        app:thumb_radius="7dp"
+
+                        app:thumb_color="#414a4c" />
+
+                    <TextView
+                        android:id="@+id/saturation_value1"
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#414a4c"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.birthday.video.maker.Birthday_Video.activity.TwoLineSeekBar
+                        android:id="@+id/hue_seekbar1"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        app:high_color="#414a4c"
+                        app:line_color="#C1C0C0"
+                        app:line_width="3dp"
+                        app:nail_color="#414a4c"
+                        app:nail_radius="1dp"
+                        app:thumb_radius="7dp"
+                        app:thumb_color="#414a4c" />
+
+                    <TextView
+                        android:id="@+id/hue_value1"
+                        android:layout_width="35dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#414a4c"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.birthday.video.maker.Birthday_Video.activity.TwoLineSeekBar
+                        android:id="@+id/warmth_seekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        app:high_color="#414a4c"
+                        app:line_color="#C1C0C0"
+                        app:line_width="3dp"
+                        app:nail_color="#414a4c"
+                        app:nail_radius="1dp"
+                        app:thumb_radius="7dp"
+                        app:thumb_color="#414a4c" />
+
+                    <TextView
+                        android:id="@+id/warmth_value"
+                        android:layout_width="35dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#414a4c"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <SeekBar
+                        android:id="@+id/vignette_seekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        app:high_color="#414a4c"
+                        app:line_color="#C1C0C0"
+                        app:line_width="3dp"
+                        app:nail_color="#414a4c"
+                        app:nail_radius="1dp"
+                        app:thumb_radius="7dp"
+                        app:thumb_color="#414a4c" />
+
+                    <TextView
+                        android:id="@+id/vignette_value"
+                        android:layout_width="35dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#414a4c"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <!-- Brightness -->
+                <LinearLayout
+                    android:id="@+id/bright_ness_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bright"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/brightness"
+                        app:tint="#DBDBDB" />
+
+                    <TextView
+                        android:id="@+id/Brightness_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/brightness"
+                        android:textColor="#DBDBDB"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+                    <View
+                        android:id="@+id/brightness_bar"
+                        android:layout_width="15dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="0dp"
+                        android:visibility= "gone"
+                        android:background=" #DBDBDB"
+                        android:importantForAccessibility="no" />
+
+                </LinearLayout>
+
+                <!-- Contrast -->
+                <LinearLayout
+                    android:id="@+id/contrast_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/contrast"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/contrast"
+                        app:tint="#DBDBDB" />
+
+                    <TextView
+                        android:id="@+id/contrast_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contrast"
+                        android:textColor="#DBDBDB"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <View
+                        android:id="@+id/contrast_bar"
+                        android:layout_width="15dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="0dp"
+                        android:visibility= "gone"
+                        android:background=" #DBDBDB"
+                        android:importantForAccessibility="no" />
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/contrast_value"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:textColor="@color/bg_color"-->
+                    <!--                        android:textSize="10sp"-->
+                    <!--                        android:textStyle="bold"-->
+                    <!--                        android:fontFamily="@font/designfont"-->
+                    <!--                        app:fontFamily="@font/designfont"-->
+                    <!--                        tools:ignore="SmallSp" />-->
+                </LinearLayout>
+
+                <!-- Saturation -->
+                <LinearLayout
+                    android:id="@+id/saturation_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/saturate"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:src="@drawable/saturation"
+                        app:tint="#DBDBDB" />
+
+                    <TextView
+                        android:id="@+id/saturate_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saturation"
+                        android:textColor="#DBDBDB"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <View
+                        android:id="@+id/saturate_bar"
+                        android:layout_width="15dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="0dp"
+                        android:background=" #DBDBDB"
+                        android:importantForAccessibility="no"
+                        android:visibility="gone" />
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/saturation_value"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:textColor="@color/bg_color"-->
+                    <!--                        android:textSize="10sp"-->
+                    <!--                        android:textStyle="bold"-->
+                    <!--                        android:fontFamily="@font/designfont"-->
+                    <!--                        app:fontFamily="@font/designfont"-->
+                    <!--                        tools:ignore="SmallSp" />-->
+                </LinearLayout>
+
+                <!-- Hue -->
+                <LinearLayout
+                    android:id="@+id/hue_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/hue"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:src="@drawable/hue"
+                        app:tint="#DBDBDB" />
+
+                    <TextView
+                        android:id="@+id/hue_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hue"
+                        android:textColor="#DBDBDB"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <View
+                        android:id="@+id/hue_bar"
+                        android:layout_width="15dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="0dp"
+                        android:background=" #DBDBDB"
+                        android:importantForAccessibility="no"
+                        android:visibility= "gone" />
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/hue_value"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:textColor="@color/bg_color"-->
+                    <!--                        android:textSize="10sp"-->
+                    <!--                        android:textStyle="bold"-->
+                    <!--                        android:fontFamily="@font/designfont"-->
+                    <!--                        app:fontFamily="@font/designfont"-->
+                    <!--                        tools:ignore="SmallSp" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/warmth_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/warmth"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/warmth"
+                        app:tint="#DBDBDB" />
+
+                    <TextView
+                        android:id="@+id/warmth_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/warmth"
+                        android:textColor="#DBDBDB"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <View
+                        android:id="@+id/warmth_bar"
+                        android:layout_width="15dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="0dp"
+                        android:background=" #DBDBDB"
+                        android:importantForAccessibility="no"
+                        android:visibility= "gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/vignette_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/vignette"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/vignetteicon"
+                        app:tint="#DBDBDB" />
+
+                    <TextView
+                        android:id="@+id/vignette_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vignette"
+                        android:textColor="#DBDBDB"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <View
+                        android:id="@+id/vignette_bar"
+                        android:layout_width="15dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="0dp"
+                        android:background=" #DBDBDB"
+                        android:importantForAccessibility="no"
+                        android:visibility= "gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

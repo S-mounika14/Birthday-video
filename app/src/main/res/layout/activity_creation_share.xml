@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/back_linear"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/text_on_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_alignTop="@id/back_arrow"
+            android:layout_alignLeft="@id/back_arrow"
+            android:layout_alignRight="@id/back_arrow"
+            android:layout_centerInParent="true"  />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back_linear"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+
+
+        <RelativeLayout
+            android:id="@+id/root_relative"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/preview_layout"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    tools:ignore="UselessParent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/indicator"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <com.birthday.video.maker.activities.LoopingViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:clipToPadding="false"
+                        app:autoScroll="false"
+                        app:isInfinite="true" />
+
+
+                    <ImageView
+                        android:id="@+id/preview_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/white_rounded_bg"
+                        android:clickable="false"
+                        android:contentDescription="@string/save"
+                        android:focusable="false"
+                        android:visibility="invisible" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+
+                        <com.birthday.video.maker.Birthday_Video.ProportionalRelativeLayout
+                            android:id="@+id/llvideoView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_4dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="@dimen/_4dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+
+                            <com.birthday.video.maker.Birthday_Video.MyVideoView
+                                android:id="@+id/videoView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center" />
+
+                            <View
+                                android:id="@+id/list_item_video_clicker"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@+id/videoView"
+                                android:layout_alignBottom="@+id/videoView"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                            <ImageView
+                                android:id="@+id/ivPlayPause"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/play_background_img"
+                                android:src="@drawable/ic_play_button_30" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:background="#88000000"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvDuration1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/videoView"
+                                    android:layout_alignBottom="@+id/videoView"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="left"
+                                    android:text="01:00"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <SeekBar
+                                    android:id="@+id/sbVideo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_toLeftOf="@+id/tvDuration"
+                                    android:layout_toRightOf="@+id/tvDuration1"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/tvDuration"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignRight="@+id/videoView"
+                                    android:layout_alignBottom="@+id/videoView"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:gravity="right"
+                                    android:text="00:00"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                        </com.birthday.video.maker.Birthday_Video.ProportionalRelativeLayout>
+                    </RelativeLayout>
+
+
+
+
+
+
+                    <FrameLayout
+                        android:id="@+id/expand_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="#20000000"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="5dp"
+                        android:theme="@style/SelectableItemThemeWhite"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/expand_image"
+                            android:src="@drawable/ic_magnify"
+                            android:visibility="visible"
+                            tools:ignore="TooDeepLayout" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <com.birthday.video.maker.activities.PageIndicatorView
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:piv_animationDuration="200"
+                    app:piv_animationType="thinWorm"
+                    app:piv_interactiveAnimation="true"
+                    app:piv_radius="5dp"
+                    app:piv_selectedColor="#f06292"
+                    app:piv_unselectedColor="#fce4ec"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/back_to_home_button"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/root"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border2"
+                android:backgroundTint="#FF8B94"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Home Icon"
+                    android:src="@drawable/ic_home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="4dp"
+                    android:text="@string/back_to_home"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/share_in_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/back_to_home_button"
+                android:layout_marginTop="10dp"
+                android:text="@string/share_in"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <!-- Share In Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/share_in_section"
+                android:layout_below="@id/share_in_text"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:id="@+id/face_book_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/share_facebook"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/logos_facebook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        android:text="@string/facebook"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/whats_app_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/share_whatsapp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/icon_watsapplastone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        android:text="@string/whatsapp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/twitter_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/share_twitter"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/icon_twitter_xnew" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        android:text="@string/twitter"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/insta_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/share_instagram"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/instagram_lastthree" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        android:text="@string/instagram"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/more_apps_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/more_icon_lastthree" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        android:text="@string/more_apps"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/ad_root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp">
+
+            <FrameLayout
+                android:id="@+id/ad_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/loading_ad_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/normal"
+                    android:gravity="center"
+                    android:text="@string/ad_loading"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:fontFamily="@font/normal" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

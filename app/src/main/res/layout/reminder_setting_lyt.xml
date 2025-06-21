@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/rem_set_back"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:contentDescription="@string/back_from_reminder_settings"
+            android:layout_weight="0.2"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/back_page_icon"
+                android:src="@drawable/ic_arrowback2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:id="@+id/rem_set_mess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/reminder_settings"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Shadow below toolbar -->
+    <TextView
+        android:id="@+id/shaaa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+            <!-- Birthday Reminders -->
+            <LinearLayout
+                android:id="@+id/rel_time5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/birthday_reminders"
+                    app:tint="#121111" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/birthday_reminders"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enable_disable_reminders"
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/checkBox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/checkbox_click"
+                    android:key="alarm" />
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F8F7F7"
+                android:layout_marginStart="56dp" />
+
+            <!-- Reminder Date -->
+            <LinearLayout
+                android:id="@+id/rel_not"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/reminder_date1"
+                    app:tint="#121111" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reminder_date"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/onbirthday"
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="24dp"-->
+                <!--                    android:layout_height="24dp"-->
+                <!--                    android:src="@android:drawable/ic_menu_more"-->
+                <!--                    app:tint="#757575" />-->
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F8F7F7"
+                android:layout_marginStart="56dp" />
+
+            <!-- Reminder Time -->
+            <LinearLayout
+                android:id="@+id/rel_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/reminder_time"
+                    app:tint="#121111" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reminder_time"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9:00 AM"
+
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="24dp"-->
+                <!--                    android:layout_height="24dp"-->
+                <!--                    android:src="@android:drawable/ic_menu_more"-->
+                <!--                    app:tint="#757575" />-->
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F8F7F7"
+                android:layout_marginStart="56dp" />
+
+            <!-- Reminder Sound -->
+            <LinearLayout
+                android:id="@+id/rel_time2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/reminder_sound"
+                    app:tint="#121111" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reminder_sound"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/play_sound"
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/checkbox_click" />
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F8F7F7"
+                android:layout_marginStart="56dp" />
+
+            <!-- Reminder Vibrate -->
+            <LinearLayout
+                android:id="@+id/rel_time3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/reminder_vibrate"
+                    app:tint="#121111" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reminder_vibrate"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activate_vibration"
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/checkBox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/checkbox_click" />
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F8F7F7"
+                android:layout_marginStart="56dp" />
+
+            <!-- App Notification -->
+            <LinearLayout
+                android:id="@+id/rel_time4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_notification"
+                    app:tint="#121111" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/textView_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_notification"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/textView_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3_days_notification"
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/checkBox_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/checkbox_click" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/viewpager_bg_color"-->
+    <!--    android:orientation="vertical">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="?attr/actionBarSize"-->
+    <!--        android:background="@drawable/toolbar_theme_bg"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:weightSum="1">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/rem_set_back"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="?attr/actionBarSize"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:contentDescription="@string/back_from_reminder_settings"-->
+    <!--            android:layout_weight="0.2"-->
+    <!--            android:gravity="center">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:contentDescription="@string/back_page_icon"-->
+    <!--                android:src="@drawable/back_page_sarees" />-->
+    <!--        </RelativeLayout>-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_weight="0.7">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/rem_set_mess"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:text="@string/reminder_settings"-->
+    <!--                android:textAlignment="center"-->
+    <!--                android:textColor="@color/darkgrey"-->
+    <!--                android:textSize="@dimen/textsize_toolbar"-->
+    <!--                android:textStyle="bold"-->
+    <!--                />-->
+    <!--        </RelativeLayout>-->
+
+    <!--    </LinearLayout>-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/shaaa"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="6dp"-->
+    <!--        android:layout_below="@+id/tool"-->
+    <!--        android:background="@drawable/shadow_down" />-->
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:cardUseCompatPadding="true"-->
+    <!--                app:cardCornerRadius="16dp"-->
+    <!--                app:cardBackgroundColor="@color/white"-->
+    <!--                app:cardElevation="3dp">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/rel_time5"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_margin="5dp">-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView1"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:layout_marginStart="15dp"-->
+    <!--                        android:layout_marginTop="10dp"-->
+    <!--                        android:text="@string/birthday_reminders"-->
+    <!--                        android:textColor="@color/black"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:textSize="18sp" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView2"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignParentLeft="true"-->
+    <!--                        android:layout_alignParentStart="true"-->
+    <!--                        android:layout_below="@+id/textView1"-->
+    <!--                        android:layout_marginBottom="10dp"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:layout_marginStart="15dp"-->
+    <!--                        android:layout_marginTop="13dp"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:text="@string/enable_disable_reminders"-->
+    <!--                        android:textColor="#3d3838" />-->
+
+    <!--                    <Switch-->
+    <!--                        android:id="@+id/checkBox1"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_alignParentEnd="true"-->
+    <!--                        android:layout_centerInParent="true"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:layout_alignParentRight="true"-->
+    <!--                        android:layout_marginEnd="15dp"-->
+    <!--                        android:layout_marginRight="15dp"-->
+    <!--                        android:contentDescription="@string/checkbox_click"-->
+    <!--                        android:key="alarm" />-->
+    <!--                </RelativeLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:cardUseCompatPadding="true"-->
+    <!--                app:cardCornerRadius="16dp"-->
+    <!--                app:cardBackgroundColor="@color/white"-->
+    <!--                app:cardElevation="3dp">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/rel_not"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_below="@+id/rel_time5"-->
+    <!--                    android:layout_margin="5dp">-->
+
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView3"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignParentLeft="true"-->
+    <!--                        android:layout_alignParentStart="true"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:layout_marginStart="15dp"-->
+    <!--                        android:text="@string/reminder_date"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:textColor="@color/black"-->
+    <!--                        android:textSize="18sp" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView11"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_below="@+id/textView3"-->
+    <!--                        android:layout_marginBottom="10dp"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:layout_marginTop="10dp"-->
+    <!--                        android:text="Small Text"-->
+    <!--                        android:textSize="13sp"-->
+    <!--                        android:textColor="@color/black" />-->
+
+
+    <!--                </RelativeLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:cardBackgroundColor="@color/white"-->
+    <!--                app:cardElevation="3dp"-->
+    <!--                app:cardCornerRadius="16dp"-->
+    <!--                app:cardUseCompatPadding="true">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/rel_time"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_below="@+id/rel_not"-->
+    <!--                    android:layout_margin="5dp">-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView31"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignParentLeft="true"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:text="@string/reminder_time"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:textColor="@color/black"-->
+    <!--                        android:textSize="18dp" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView10"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_below="@+id/textView31"-->
+    <!--                        android:layout_marginBottom="10dp"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:layout_marginTop="10dp"-->
+    <!--                        android:textSize="13sp"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:textColor="@color/black" />-->
+
+    <!--                </RelativeLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:cardBackgroundColor="@color/white"-->
+    <!--                app:cardElevation="3dp"-->
+    <!--                app:cardCornerRadius="16dp"-->
+    <!--                app:cardUseCompatPadding="true">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/rel_time2"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_below="@+id/rel_time"-->
+    <!--                    android:layout_margin="5dp">-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView6"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignParentLeft="true"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:layout_alignParentStart="true"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:layout_marginStart="15dp"-->
+    <!--                        android:text="@string/reminder_sound"-->
+    <!--                        android:textColor="@color/black"-->
+    <!--                        android:textSize="18sp" />-->
+
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView7"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignLeft="@+id/textView6"-->
+    <!--                        android:layout_alignStart="@+id/textView6"-->
+    <!--                        android:layout_below="@+id/textView6"-->
+    <!--                        android:layout_marginBottom="10dp"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:layout_marginTop="15dp"-->
+    <!--                        android:text="@string/play_sound"-->
+    <!--                        android:textSize="13sp"-->
+    <!--                        android:textColor="#3d3838" />-->
+
+    <!--                    <Switch-->
+    <!--                        android:id="@+id/checkBox2"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignParentEnd="true"-->
+    <!--                        android:layout_alignParentRight="true"-->
+    <!--                        android:layout_centerInParent="true"-->
+    <!--                        android:layout_marginEnd="15dp"-->
+    <!--                        android:layout_marginRight="15dp"-->
+    <!--                        android:contentDescription="@string/checkbox_click"-->
+    <!--                       />-->
+    <!--                </RelativeLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:cardBackgroundColor="@color/white"-->
+    <!--                app:cardElevation="3dp"-->
+    <!--                app:cardCornerRadius="16dp"-->
+    <!--                app:cardUseCompatPadding="true">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/rel_time3"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_below="@+id/rel_time2"-->
+    <!--                    android:layout_margin="5dp">-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView8"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignParentLeft="true"-->
+    <!--                        android:layout_alignParentStart="true"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:layout_marginStart="15dp"-->
+    <!--                        android:text="@string/reminder_vibrate"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:textColor="@color/black"-->
+    <!--                        android:textSize="18sp" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView9"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignLeft="@+id/textView8"-->
+    <!--                        android:layout_alignStart="@+id/textView8"-->
+    <!--                        android:layout_below="@+id/textView8"-->
+    <!--                        android:layout_marginBottom="10dp"-->
+    <!--                        android:layout_marginTop="15dp"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:textSize="13sp"-->
+    <!--                        android:text="@string/activate_vibration"-->
+    <!--                        android:textColor="#3d3838" />-->
+
+
+    <!--                    <Switch-->
+    <!--                        android:id="@+id/checkBox3"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerInParent="true"-->
+    <!--                        android:layout_alignParentEnd="true"-->
+    <!--                        android:layout_alignParentRight="true"-->
+    <!--                        android:layout_marginEnd="15dp"-->
+    <!--                        android:contentDescription="@string/checkbox_click"-->
+    <!--                        android:layout_marginRight="15dp"-->
+    <!--                        />-->
+    <!--                </RelativeLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:cardBackgroundColor="@color/white"-->
+    <!--                app:cardElevation="3dp"-->
+    <!--                app:cardCornerRadius="16dp"-->
+    <!--                app:cardUseCompatPadding="true">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/rel_time4"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_below="@+id/rel_time3"-->
+    <!--                    android:layout_margin="5dp">-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView_days"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignParentLeft="true"-->
+    <!--                        android:layout_alignParentStart="true"-->
+    <!--                        android:layout_marginLeft="15dp"-->
+    <!--                        android:layout_marginStart="15dp"-->
+    <!--                        android:text="@string/app_notification"-->
+    <!--                        android:textColor="@color/black"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:textSize="18sp"-->
+    <!--                        tools:ignore="RelativeOverlap" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView_d"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_alignLeft="@+id/textView_days"-->
+    <!--                        android:layout_alignStart="@+id/textView_days"-->
+    <!--                        android:layout_below="@+id/textView_days"-->
+    <!--                        android:layout_marginBottom="10dp"-->
+    <!--                        android:layout_marginTop="15dp"-->
+    <!--                        android:textAppearance="@style/customfontstyle"-->
+    <!--                        android:textSize="13sp"-->
+    <!--                        android:text="@string/_3_days_notification"-->
+    <!--                        android:textColor="#3d3838" />-->
+
+    <!--                    <Switch-->
+    <!--                        android:id="@+id/checkBox_d"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerInParent="true"-->
+    <!--                        android:layout_alignParentEnd="true"-->
+    <!--                        android:layout_alignParentRight="true"-->
+    <!--                        android:layout_marginEnd="15dp"-->
+    <!--                        android:layout_marginRight="15dp"-->
+    <!--                        android:contentDescription="@string/checkbox_click"-->
+    <!--                         />-->
+    <!--                </RelativeLayout>-->
+
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+
+    <!--        </LinearLayout>-->
+    <!--    </ScrollView>-->
+    <!--</LinearLayout>-->

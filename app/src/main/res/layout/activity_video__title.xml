@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/viewpager_bg_color">
+
+    <LinearLayout
+        android:id="@+id/toolbar_video_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_theme_bg"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/back_from_video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:contentDescription="@string/back_from_video_title"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back_page_icon"
+                android:src="@drawable/back_page_sarees" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:id="@+id/tool_words"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/choose_video_title"
+                android:textAlignment="center"
+                android:textColor="@color/darkgrey"
+                android:textSize="@dimen/textsize_toolbar"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|right"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/skip_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/skip_bg"
+                android:contentDescription="done_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center"
+                        android:text="@string/skip"
+                        android:textAppearance="@style/customfontstyle"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/toolbardone_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|center"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/my_bgss"
+                android:contentDescription="done_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center"
+                        android:text="@string/next"
+                        android:textAppearance="@style/customfontstyle"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/shadowutop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_down"
+        android:contentDescription="@string/shadowtop"
+        android:layout_below="@+id/toolbar_video_title"
+        android:minHeight="6.0dip" />
+
+    <RelativeLayout
+        android:id="@+id/cv_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_below="@+id/toolbar_video_title">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout_title"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/transparent"
+            app:tabGravity="fill"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/transparent"
+            android:gravity="center">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line"/>
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shadowutop"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:background="@color/transparent"
+            android:id="@+id/video_title_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

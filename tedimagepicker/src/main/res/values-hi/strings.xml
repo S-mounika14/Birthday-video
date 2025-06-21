@@ -1,0 +1,29 @@
+<resources>
+    <string name="ted_image_picker_album_all">सभी</string>
+
+    <string name="ted_image_picker_empty">खाली</string>
+
+    <string name="ted_image_picker_title">छवि का चयन करें</string>
+
+    <string name="ted_image_picker_done">हो गया</string>
+
+    <string name="ted_image_picker_max_count">आप और अधिक नहीं जोड़ सकते</string>
+
+    <string name="ted_image_picker_min_count">आपको छवियों का चयन करना होगा</string>
+
+    <string name="ted_image_picker_image">छवि</string>
+
+    <string name="ted_image_picker_video">वीडियो</string>
+
+    <string name="ted_image_picker_image_video">छवि/वीडियो</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">आपने %1$s की एक चुनिंदा संख्या को एक्सेस दिया है</string>
+
+    <string name="ted_image_picker_manage">प्रबंधित करना</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">ज़्यादा चुनें %1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">पूर्ण पहुँच प्रदान करें %1$s</string>
+
+    <string name="ted_image_picker_cancel">रद्द करना</string>
+</resources>

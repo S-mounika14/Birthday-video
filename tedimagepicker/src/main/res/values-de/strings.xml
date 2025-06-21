@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ted_image_picker_album_all">Alle</string>
+
+    <string name="ted_image_picker_empty">Leer</string>
+
+    <string name="ted_image_picker_title">Bild auswählen</string>
+
+    <string name="ted_image_picker_done">Erledigt</string>
+
+    <string name="ted_image_picker_max_count">Sie können nicht mehr hinzufügen</string>
+
+    <string name="ted_image_picker_min_count">Sie müssen Bilder auswählen</string>
+
+    <string name="ted_image_picker_image">Bild</string>
+
+    <string name="ted_image_picker_video">Video</string>
+
+    <string name="ted_image_picker_image_video">Bild/Video</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">Sie haben einer ausgewählten Anzahl von %1$s Zugriff gewährt.</string>
+
+    <string name="ted_image_picker_manage">Verwalten</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">Weitere %1$s auswählen</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">Vollständigen Zugriff gewähren %1$s</string>
+
+    <string name="ted_image_picker_cancel">Stornieren</string>
+</resources>

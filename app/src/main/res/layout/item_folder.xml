@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/folder_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:gravity="center_vertical"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:theme="@style/SelectableItemThemeHalfBlack">
+    <FrameLayout
+        android:id="@+id/play_card_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/music_note_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_folder_icon" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/folder_name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="song_name"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/folder_songs_count_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="18"
+            android:textColor="#000"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>
+

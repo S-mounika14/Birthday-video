@@ -1,0 +1,29 @@
+<resources>
+    <string name="ted_image_picker_album_all">Tous</string>
+
+    <string name="ted_image_picker_empty">Vide</string>
+
+    <string name="ted_image_picker_title">Sélectionner une image</string>
+
+    <string name="ted_image_picker_done">Fait</string>
+
+    <string name="ted_image_picker_max_count">Vous ne pouvez pas en ajouter plus</string>
+
+    <string name="ted_image_picker_min_count">Vous devez choisir des images</string>
+
+    <string name="ted_image_picker_image">Image</string>
+
+    <string name="ted_image_picker_video">Vidéo</string>
+
+    <string name="ted_image_picker_image_video">Image/Vidéo</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">Vous avez donné accès à un nombre restreint de %1$s</string>
+
+    <string name="ted_image_picker_manage">Gérer</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">Sélectionnez plus de %1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">Accorder un accès complet à %1$s</string>
+
+    <string name="ted_image_picker_cancel">Annuler</string>
+</resources>

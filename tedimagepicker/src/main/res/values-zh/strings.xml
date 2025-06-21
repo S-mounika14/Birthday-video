@@ -1,0 +1,29 @@
+<resources>
+    <string name="ted_image_picker_album_all">全部</string>
+
+    <string name="ted_image_picker_empty">空的</string>
+
+    <string name="ted_image_picker_title">选择图像</string>
+
+    <string name="ted_image_picker_done">完毕</string>
+
+    <string name="ted_image_picker_max_count">您无法添加更多</string>
+
+    <string name="ted_image_picker_min_count">你必须选择图像</string>
+
+    <string name="ted_image_picker_image">图像</string>
+
+    <string name="ted_image_picker_video">视频</string>
+
+    <string name="ted_image_picker_image_video">图片/视频</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">您已授予部分%1$s的访问权限</string>
+
+    <string name="ted_image_picker_manage">管理</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">选择更多%1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">授予完全访问权限 %1$s</string>
+
+    <string name="ted_image_picker_cancel">取消</string>
+</resources>

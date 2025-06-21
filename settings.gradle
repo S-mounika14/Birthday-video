@@ -1,0 +1,32 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+//include ':app'
+
+//pluginManagement {
+//    repositories {
+//        google()
+//        mavenCentral()
+//        gradlePluginPortal()
+//    }
+//}
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url = uri("https://storage.googleapis.com/r8-releases/raw") }
+    }
+}
+
+dependencyResolutionManagement{
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://jitpack.io" }
+        maven { url = uri("https://storage.googleapis.com/r8-releases/raw") }
+    }
+}
+rootProject.name="BirthdayVideoMaker"
+include ':app',':tedimagepicker'

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewpager_bg_color"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+    <RelativeLayout
+        android:id="@+id/capture_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/start_recycler"
+        android:layout_weight="2.3"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/imageview_end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/capture_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/start_recycler"
+        android:layout_weight="2.3">
+
+
+        <ImageView
+            android:id="@+id/imageview_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/start_recycler"
+        android:layout_below="@+id/capture_layout"
+        android:layout_gravity="center|bottom"
+        android:layout_marginLeft="3dp"
+        android:layout_weight="0.15"
+        android:gravity="start|bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/choose_start_end_frames"
+            android:textAppearance="@style/customfontstyle"
+            android:textColor="@color/darkgrey"
+            android:textSize="16sp"
+            android:textStyle="normal"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_weight="0.55"
+        android:gravity="center"
+        android:layout_marginBottom="3dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/start_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:background="@color/viewpager_bg_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

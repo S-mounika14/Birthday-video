@@ -1,0 +1,29 @@
+<resources>
+    <string name="ted_image_picker_album_all">Tất cả</string>
+
+    <string name="ted_image_picker_empty">Trống</string>
+
+    <string name="ted_image_picker_title">Chọn hình ảnh</string>
+
+    <string name="ted_image_picker_done">Xong</string>
+
+    <string name="ted_image_picker_max_count">Bạn không thể thêm nữa</string>
+
+    <string name="ted_image_picker_min_count">Bạn phải lựa chọn hình ảnh</string>
+
+    <string name="ted_image_picker_image">Hình ảnh</string>
+
+    <string name="ted_image_picker_video">Băng hình</string>
+
+    <string name="ted_image_picker_image_video">Hình ảnh/Video</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">Bạn đã cấp quyền truy cập cho một số %1$s đã chọn</string>
+
+    <string name="ted_image_picker_manage">Quản lý</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">Chọn thêm %1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">Cấp quyền truy cập đầy đủ %1$s</string>
+
+    <string name="ted_image_picker_cancel">Hủy bỏ</string>
+</resources>

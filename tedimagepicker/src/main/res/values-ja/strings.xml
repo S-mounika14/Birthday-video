@@ -1,0 +1,29 @@
+<resources>
+    <string name="ted_image_picker_album_all">全て</string>
+
+    <string name="ted_image_picker_empty">空の</string>
+
+    <string name="ted_image_picker_title">画像を選択</string>
+
+    <string name="ted_image_picker_done">終わり</string>
+
+    <string name="ted_image_picker_max_count">これ以上追加することはできません</string>
+
+    <string name="ted_image_picker_min_count">画像を選択する必要があります</string>
+
+    <string name="ted_image_picker_image">画像</string>
+
+    <string name="ted_image_picker_video">ビデオ</string>
+
+    <string name="ted_image_picker_image_video">画像/動画</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">選択した数の%1$sへのアクセスを許可しました</string>
+
+    <string name="ted_image_picker_manage">管理</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">さらに選択%1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">フルアクセスを許可する %1$s</string>
+
+    <string name="ted_image_picker_cancel">キャンセル</string>
+</resources>

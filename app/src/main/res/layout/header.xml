@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#202020"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+
+    <ImageView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_img"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/navigation_header_image" />
+
+</LinearLayout>

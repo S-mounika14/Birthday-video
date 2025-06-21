@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/White</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+
+
+    </style>
+
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        <item name="android:windowFullscreen">true</item>-->
+<!--        <item name="colorControlHighlight">#fff</item>-->
+<!--        <item name="android:statusBarColor">@color/White</item>-->
+<!--        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>-->
+<!--    </style>-->
+
+
+</resources>

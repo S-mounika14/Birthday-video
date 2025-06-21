@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ted_image_picker_album_all">Tüm</string>
+
+    <string name="ted_image_picker_empty">Boş</string>
+
+    <string name="ted_image_picker_title">Resim Seç</string>
+
+    <string name="ted_image_picker_done">Tamamlamak</string>
+
+    <string name="ted_image_picker_max_count">Daha fazlasını ekleyemezsiniz</string>
+
+    <string name="ted_image_picker_min_count">Seçtiğiniz resimler var</string>
+
+    <string name="ted_image_picker_image">Resim</string>
+
+    <string name="ted_image_picker_video">Video</string>
+
+    <string name="ted_image_picker_image_video">Resim/Video</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">%1$s seçili sayıda kişiye erişim izni verdiniz</string>
+
+    <string name="ted_image_picker_manage">Üstesinden gelmek</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">Daha fazlasını seçin %1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">%1$s tam erişim izni verin</string>
+
+    <string name="ted_image_picker_cancel">İptal etmek</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/order_entries"
+        android:textColor="#333333"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/checkbox_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkbox_days_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_button_background"
+            android:paddingVertical="12dp"
+            android:paddingStart="12dp"
+            android:text="@string/days_left"
+            android:textColor="#434343"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:buttonTint="#434343" />
+
+        <CheckBox
+            android:id="@+id/checkbox_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_button_background"
+            android:paddingVertical="12dp"
+            android:paddingStart="12dp"
+            android:text="@string/name"
+            android:textColor="#434343"
+            android:textSize="16sp"
+            android:buttonTint="#434343" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/cancel"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

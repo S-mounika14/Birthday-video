@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewpager_bg_color"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fav_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_theme_bg" />
+    <TextView
+        android:id="@+id/shaaa"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@+id/tool_launch"
+        android:background="@drawable/shadow_down" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listquot"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp" />
+
+        <TextView
+            android:id="@+id/nofavtext"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center|center_horizontal"
+            android:text="@string/you_don_t_have_any_favourites_yet"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</LinearLayout>

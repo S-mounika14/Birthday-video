@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/text_dialog_root_layout"
+    android:background="@color/transparent"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/close_text_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/close_text_edit"
+        android:src="@drawable/ic_close_24dp"
+        />
+
+    <ImageView
+        android:id="@+id/done_text_dialog"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_done"
+      />
+
+    <com.birthday.video.maker.EditTextBackEvent
+        android:id="@+id/edit_text_text_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:hint="@string/enter_text"
+        android:imeOptions="actionDone"
+        android:inputType="textVisiblePassword|textNoSuggestions|textMultiLine"
+        android:padding="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textColorHint="#fffffaf0"
+        android:textSize="25sp"
+        />
+
+
+</RelativeLayout>

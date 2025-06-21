@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewpager_bg_color"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/shadowutop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_down"
+        android:contentDescription="@string/shadowtop"
+        android:minHeight="6.0dip" />
+
+   <!-- <FrameLayout
+        android:id="@+id/adContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_below="@+id/shadowutop"/>-->
+
+
+    <LinearLayout
+        android:id="@+id/cv_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/transparent"
+        android:layout_below="@+id/shadowutop">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout_title_creation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:tabGravity="center"
+            app:tabIndicator="@drawable/underline"
+            app:tabIndicatorColor="@color/blue_color"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"  />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cv_tab"
+        android:background="@color/transparent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

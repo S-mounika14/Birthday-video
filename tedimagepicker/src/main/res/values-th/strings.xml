@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ted_image_picker_album_all">ทั้งหมด</string>
+
+    <string name="ted_image_picker_empty">ว่างเปล่า</string>
+
+    <string name="ted_image_picker_title">เลือกภาพ</string>
+
+    <string name="ted_image_picker_done">เสร็จแล้ว</string>
+
+    <string name="ted_image_picker_max_count">คุณไม่สามารถเพิ่มเพิ่มเติมได้</string>
+
+    <string name="ted_image_picker_min_count">คุณจะต้องเลือกภาพ</string>
+
+    <string name="ted_image_picker_image">ภาพ</string>
+
+    <string name="ted_image_picker_video">วีดีโอ</string>
+
+    <string name="ted_image_picker_image_video">ภาพ/วีดิโอ</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">คุณได้ให้สิทธิ์การเข้าถึงแก่ %1$s จำนวนที่เลือก</string>
+
+    <string name="ted_image_picker_manage">จัดการ</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">เลือกเพิ่มเติม %1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">ให้สิทธิ์การเข้าถึงแบบเต็ม %1$s</string>
+
+    <string name="ted_image_picker_cancel">ยกเลิก</string>
+</resources>

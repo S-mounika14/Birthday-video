@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/viewpager_bg_color"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/toolbar_stickers"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <ImageView
+                            android:id="@+id/nav_drawer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_navigation" />
+
+                        <TextView
+                            android:id="@+id/tool_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_toEndOf="@id/nav_drawer"
+                            android:layout_toStartOf="@id/creations_button"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingBottom="3dp"
+                            android:text="@string/birthday_wish_maker"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@fonts/Roboto-Medium"
+                            tools:ignore="RelativeOverlap" />
+
+                        <ImageView
+                            android:id="@+id/creations_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="12dp"
+                            android:paddingBottom="4dp"
+                            android:src="@drawable/creations_icon" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <RelativeLayout
+                    android:id="@+id/delete_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/toolbar_theme_bg"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/cancel_image_view"
+                        android:layout_width="47dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/cancel"
+                        android:focusable="true"
+                        android:theme="@style/customfontstyle"
+                        android:tint="#868585"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_close24" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_toLeftOf="@+id/delete_count"
+                        android:focusable="true"
+                        android:padding="4dp"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:theme="@style/SelectableItemThemeGray"
+                        android:tint="#868585"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_delete_30" />
+
+                    <TextView
+                        android:id="@+id/delete_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/darkgrey"
+                        android:text="(0)"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_stickers"
+            android:background="@color/viewpager_bg_color">
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <com.birthday.video.maker.Bottomview_Fragments.SpaceTabLayout
+        android:id="@+id/spaceTabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:button_color="@color/colorAccent"
+        app:number_of_tabs="one"
+        app:starting_position="zero"
+        app:tab_color="@color/white" />
+</RelativeLayout>
+
+
+

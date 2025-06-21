@@ -1,0 +1,29 @@
+<resources>
+    <string name="ted_image_picker_album_all">Tutto</string>
+
+    <string name="ted_image_picker_empty">Vuoto</string>
+
+    <string name="ted_image_picker_title">Seleziona Immagine</string>
+
+    <string name="ted_image_picker_done">Fatto</string>
+
+    <string name="ted_image_picker_max_count">Non puoi aggiungerne altri</string>
+
+    <string name="ted_image_picker_min_count">Devi scegliere le immagini</string>
+
+    <string name="ted_image_picker_image">Immagine</string>
+
+    <string name="ted_image_picker_video">Video</string>
+
+    <string name="ted_image_picker_image_video">Immagine/Video</string>
+
+    <string name="ted_image_picker_partial_access_notice_fmt">Hai concesso l\'accesso a un numero selezionato di %1$s</string>
+
+    <string name="ted_image_picker_manage">Maneggio</string>
+
+    <string name="ted_image_picker_select_more_photo_video_fmt">Seleziona altro %1$s</string>
+
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">Concedi l\'accesso completo %1$s</string>
+
+    <string name="ted_image_picker_cancel">Cancellare</string>
+</resources>

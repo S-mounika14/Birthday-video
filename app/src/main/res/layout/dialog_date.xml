@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/White"
+    android:id="@+id/container"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <DatePicker
+        android:id="@+id/datePickerBirth"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_width="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/checkBoxYear"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:button="@drawable/customdrawablecheckbox"
+        android:gravity="center"
+        android:text="@string/check_this_if_you_don_t_know_year" />
+</LinearLayout>

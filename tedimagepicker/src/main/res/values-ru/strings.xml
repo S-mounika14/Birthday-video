@@ -1,0 +1,16 @@
+<resources>
+    <string name="ted_image_picker_album_all">Все</string>
+    <string name="ted_image_picker_empty">Пустой</string>
+    <string name="ted_image_picker_title"> Выберите изображение </string>
+    <string name="ted_image_picker_done">Готово</string>
+    <string name="ted_image_picker_max_count">Вы не можете добавить больше</string>
+    <string name="ted_image_picker_min_count"> Вам остается выбрать изображения </string>
+    <string name="ted_image_picker_image">Изображение </string>
+    <string name="ted_image_picker_video">Видео</string>
+    <string name="ted_image_picker_image_video">Изображение/Видео</string>
+    <string name="ted_image_picker_partial_access_notice_fmt"> Вы предоставили доступ выбранному количеству пользователей %1$s. </string>
+    <string name="ted_image_picker_manage"> Управлять </string>
+    <string name="ted_image_picker_select_more_photo_video_fmt">Выберите больше %1$s</string>
+    <string name="ted_image_picker_grant_full_access_photo_video_fmt">Предоставление полного доступа %1$s</string>
+    <string name="ted_image_picker_cancel">Отмена</string>
+</resources>
